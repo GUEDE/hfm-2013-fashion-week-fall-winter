@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>2013 Spring / Summer Fashion Week</title>
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="stylesheet" href="themes/core/core.css" />
+		<link rel="stylesheet" href="themes/paris/theme.css" />
+		<script src="js/libs/jquery-1.7.2.js"></script>
+		<script src="js/libs/jquery.cycle.all.js"></script>
+		<script src="js/libs/jquery.mousewheel.js"></script>
+		<script src="js/libs/jquery.jscrollpane.min.js"></script>
+		<script src="js/libs/jquery-simpleslide.js"></script>
+		<script src="js/libs/jquery.blockUI.js"></script>
+		<script src="js/libs/flowplayer-3.2.11.min.js"></script>
+		<script src="js/utilities.js"></script>
+		<script src="js/modules.js"></script>
+		<script src="js/general.js"></script>
+	</head>
+	<body id="home" data-city="paris">
+		<div id="container">
+			<div id="header">
+				<ul id="main-nav">
+					<li>
+						<a class="cleartext" href="">paris</a>
+					</li>
+					<li>
+						<a class="cleartext" href="">milan</a>
+					</li>
+					<li>
+						<a class="cleartext" href="">london</a>
+					</li>
+					<li>
+						<a class="cleartext" href="">new york</a>
+					</li>
+				</ul>
+				<div id="fashionshow">
+					<a id="fashionshow-player" href="media/test.flv"></a>
+					<span id="fashionshow-title">2013春夏时装周视频标题</span>
+				</div>
+			</div>
+			<div id="content">
+				<ul id="sub-nav">
+					<li>
+						<a class="cleartext" href="#focus">focus</a>
+					</li>
+					<li>
+						<a class="cleartext" href="#show">show</a>
+					</li>
+					<li>
+						<a class="cleartext" href="#fashion">fashion</a>
+					</li>
+					<li>
+						<a class="cleartext" href="#weibo">weibo</a>
+					</li>
+					<li>
+						<a class="cleartext" href="">aee</a>
+					</li>
+				</ul>
+				<div id="focus">
+					<div id="focus-kv">
+						<ul id="focus-slideshow">
+							<li>
+								<a href=""><img width="472" height="487" src="images/kv-sample-photo1.jpg" alt="第一张图大标题-次标题，标题间用横杠分割" /></a>
+							</li>
+							<li>
+								<a href=""><img width="472" height="487" src="images/kv-sample-photo2.jpg" alt="第二张图大标题-次标题，标题间用横杠分割" /></a>
+							</li>
+							<li>
+								<a href=""><img width="472" height="487" src="images/kv-sample-photo3.jpg" alt="第三张图大标题-次标题，标题间用横杠分割" /></a>
+							</li>
+							<li>
+								<a href=""><img width="472" height="487" src="images/kv-sample-photo4.jpg" alt="第四张图大标题-次标题，标题间用横杠分割" /></a>
+							</li>
+							<li>
+								<a href=""><img width="472" height="487" src="images/kv-sample-photo5.jpg" alt="第五张图大标题-次标题，标题间用横杠分割" /></a>
+							</li>
+						</ul>
+						<div id="focus-slideshow-title">
+							<p class="focus-slideshow-text"></p>
+							<a class="focus-slideshow-button focus-slideshow-prev sprite-buttons cleartext" href="">prev</a>
+							<a class="focus-slideshow-button focus-slideshow-next sprite-buttons cleartext" href="">next</a>
+							<div class="focus-slideshow-overlay"></div>
+						</div>
+					</div>
+					<ul id="focus-articles">
+						<li>
+							<a href=""><img width="494" height="264" src="images/sample-photo.jpg" alt="" /></a>
+						</li>
+						<li>
+							<a href=""><img width="494" height="264" src="images/sample-photo.jpg" alt="" /></a>
+						</li>
+					</ul>
+				</div>
+				<div id="show">
+					<a id="show-more" class="cleartext" href="">more</a>
+					<div id="show-schedule">
+						<div id="show-schedule-date">
+							<a data-schedule-date="2012-09-25" class="show-schedule-date-item show-schedule-date-item-1" href="">
+								<span></span>
+							</a>
+							<a data-schedule-date="2012-09-26" class="show-schedule-date-item show-schedule-date-item-2" href="">
+								<span></span>
+							</a>
+							<a data-schedule-date="2012-09-27" class="show-schedule-date-item show-schedule-date-item-3" href="">
+								<span></span>
+							</a>
+							<a data-schedule-date="2012-09-28" class="show-schedule-date-item show-schedule-date-item-4" href="">
+								<span></span>
+							</a>
+							<a data-schedule-date="2012-09-29" class="show-schedule-date-item show-schedule-date-item-5" href="">
+								<span></span>
+							</a>
+							<a data-schedule-date="2012-09-30" class="show-schedule-date-item show-schedule-date-item-6" href="">
+								<span></span>
+							</a>
+							<a data-schedule-date="2012-10-01" class="show-schedule-date-item show-schedule-date-item-7" href="">
+								<span></span>
+							</a>
+							<a data-schedule-date="2012-10-02" class="show-schedule-date-item show-schedule-date-item-8" href="">
+								<span></span>
+							</a>
+							<a data-schedule-date="2012-10-03" class="show-schedule-date-item show-schedule-date-item-9" href="">
+								<span></span>
+							</a>
+						</div>
+						<div id="show-schedule-time">
+							<ul></ul>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div id="show-content">
+						<div id="show-pictures">
+							<ul>
+								<li>
+									<a href=""><img width="309" height="427" src="images/sample-photo.jpg" alt="" /></a>
+									<span class="show-picture-title">ALVIERO MARTINI</span>
+								</li>
+								<li>
+									<a href=""><img width="309" height="427" src="images/sample-photo.jpg" alt="" /></a>
+									<span class="show-picture-title">ANTONIO BERARDI</span>
+								</li>
+								<li>
+									<a href=""><img width="309" height="427" src="images/sample-photo.jpg" alt="" /></a>
+									<span class="show-picture-title">ALBERTA FERRETTI</span>
+								</li>
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+						<div id="show-editor">
+							<div id="show-editor-info">
+								<img width="268" height="162" src="images/sample-photo.jpg" alt="" />
+							</div>
+							<div id="show-editor-article">
+								<dl>
+									<dt>Valentino 2011早秋系列</dt>
+									<dd>看着Maria Grazia Chiuri 和 Pier Paolo Piccioli两位设计师如此谦逊的态度、对深色服装如此的清心寡欲，再看看他们创作的时装作品所呈现的强烈的视觉冲击力，你也只能惊叹于此了。</dd>
+								</dl>
+								<a class="show-editor-article-more cleartext" href="">read more</a>
+							</div>
+							<div id="show-editor-article-pic">
+								<a href=""><img width="198" height="182" src="images/sample-photo.jpg" align="" /></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div id="fashion">
+					<a id="fashion-more" class="cleartext" href="">more</a>
+					<ul id="fashion-nav">
+						<li>
+							<a class="cleartext" href="">comments</a>
+						</li>
+						<li>
+							<a class="cleartext" href="">videos</a>
+						</li>
+						<li>
+							<a class="cleartext" href="">pictures</a>
+						</li>
+						<li>
+							<a class="cleartext" href="">make up</a>
+						</li>
+						<li>
+							<a class="cleartext" href="">aee</a>
+						</li>
+					</ul>
+					<div id="fashion-city" data-display-type="paging">
+						<div class="fashion-street">
+						</div>
+						<div class="fashion-street">
+						</div>
+						<div class="fashion-street">
+						</div>
+						<div class="clearfix"></div>
+						<div id="fashion-paging">
+							<ul>
+								<li>
+									<a class="fashion-paging-button fashion-paging-prev sprite-parts" href=""></a>
+								</li>
+								<li>
+									<a class="fashion-paging-button fashion-paging-next sprite-parts" href=""></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="weibo">
+					<div id="weibo-mag-editor" class="weibo-editors">
+						<div class="weibo-editors-content">
+							<div class="weibo-editors-item">
+								<div class="weibo-editors-item-inner">
+									<a class="weibo-editors-avatar" href=""><img width="50" height="50" src="images/sample-photo.jpg" alt="" /></a>
+									<div class="weibo-editors-detail">
+										<a class="weibo-editors-name" href="">ELLE杂志编辑</a>
+										<p class="weibo-editors-msg">
+											过了25岁，突然发现黑眼圈和眼周的细纹已经挥之不去了我们要怎么才能看链接吧 <a href="http://www.ellechina.com/2012">http://www.ellechina.com/2012</a>
+										</p>
+										<a href=""><img width="191" height="231" src="images/sample-photo.jpg" alt="" /></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="weibo-editors-item">
+								<div class="weibo-editors-item-inner">
+									<a class="weibo-editors-avatar" href=""><img width="50" height="50" src="images/sample-photo.jpg" alt="" /></a>
+									<div class="weibo-editors-detail">
+										<a class="weibo-editors-name" href="">ELLE杂志编辑</a>
+										<p class="weibo-editors-msg">
+											过了25岁，突然发现黑眼圈和眼周的细纹已经挥之不去了我们要怎么才能看链接吧 <a href="http://www.ellechina.com/2012">http://www.ellechina.com/2012</a>
+										</p>
+										<a href=""><img width="191" height="132" src="images/sample-photo.jpg" alt="" /></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="weibo-editors-item">
+								<div class="weibo-editors-item-inner weibo-editors-item-noline">
+									<a class="weibo-editors-avatar" href=""><img width="50" height="50" src="images/sample-photo.jpg" alt="" /></a>
+									<div class="weibo-editors-detail">
+										<a class="weibo-editors-name" href="">ELLE杂志编辑</a>
+										<p class="weibo-editors-msg">
+											过了25岁，突然发现黑眼圈和眼周的细纹已经挥之不去了我们要怎么才能看链接吧 <a href="http://www.ellechina.com/2012">http://www.ellechina.com/2012</a>
+										</p>
+										<a href=""><img width="191" height="300" src="images/sample-photo.jpg" alt="" /></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="weibo-web-editor" class="weibo-editors">
+						<div class="weibo-editors-content">
+							<div class="weibo-editors-item">
+								<div class="weibo-editors-item-inner">
+									<a class="weibo-editors-avatar" href=""><img width="50" height="50" src="images/sample-photo.jpg" alt="" /></a>
+									<div class="weibo-editors-detail">
+										<a class="weibo-editors-name" href="">ELLE杂志编辑</a>
+										<p class="weibo-editors-msg">
+											过了25岁，突然发现黑眼圈和眼周的细纹已经挥之不去了我们要怎么才能看链接吧 <a href="http://www.ellechina.com/2012">http://www.ellechina.com/2012</a>
+										</p>
+										<a href=""><img width="191" height="100" src="images/sample-photo.jpg" alt="" /></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="weibo-editors-item">
+								<div class="weibo-editors-item-inner">
+									<a class="weibo-editors-avatar" href=""><img width="50" height="50" src="images/sample-photo.jpg" alt="" /></a>
+									<div class="weibo-editors-detail">
+										<a class="weibo-editors-name" href="">ELLE杂志编辑</a>
+										<p class="weibo-editors-msg">
+											过了25岁，突然发现黑眼圈和眼周的细纹已经挥之不去了我们要怎么才能看链接吧 <a href="http://www.ellechina.com/2012">http://www.ellechina.com/2012</a>
+										</p>
+										<a href=""><img width="191" height="200" src="images/sample-photo.jpg" alt="" /></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="weibo-editors-item">
+								<div class="weibo-editors-item-inner weibo-editors-item-noline">
+									<a class="weibo-editors-avatar" href=""><img width="50" height="50" src="images/sample-photo.jpg" alt="" /></a>
+									<div class="weibo-editors-detail">
+										<a class="weibo-editors-name" href="">ELLE杂志编辑</a>
+										<p class="weibo-editors-msg">
+											过了25岁，突然发现黑眼圈和眼周的细纹已经挥之不去了我们要怎么才能看链接吧 <a href="http://www.ellechina.com/2012">http://www.ellechina.com/2012</a>
+										</p>
+										<a href=""><img width="191" height="150" src="images/sample-photo.jpg" alt="" /></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="weibo-elle">
+						<dl id="weibo-elle-info">
+							<dd id="weibo-elle-avatar">
+								<a href=""><img width="101" height="101" src="images/sample-photo.jpg" alt="" /></a>
+							</dd>
+							<dt>ELLE</dt>
+							<dd id="weibo-elle-name">
+								<a href="">《ELLE》杂志官方微博</a>
+							</dd>
+						</dl>
+						<p id="weibo-elle-msg">
+							爱美是女孩的天性，看看那些在运动场上挥汗如雨的靓丽身影吧，不经意地瞥到指尖，让你恍然大悟眼前这个举手投足流露大将风范的运动员，说到底只是一个花季少女！她们是运动员，她们也是妙龄女孩，她们会用自己独特的方式来诠释奥运之美。
+						</p>
+						<iframe id="weibo-elle-watching" width="63" height="24" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" scrolling="no" border="0" src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=63&height=24&uid=1273610165&style=1&btn=red&dpc=1"></iframe>
+						<a id="weibo-elle-more" class="cleartext" href="">more</a>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<p>Copyright &copy; 2012 ellechina.com  All rights reserved.  北京必尔得广告有限公司 版权所有  京ICP证060525号  </p>
+			</div>
+		</div>
+	</body>
+</html>

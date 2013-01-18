@@ -1,0 +1,34 @@
+#home { background: #eee6de url(images/bg-body-home.jpg) no-repeat 50% 0; }
+#list { background: #eee6de url(images/bg-body-list.jpg) no-repeat 50% 0; }
+
+.sprite-parts { background: url(images/sprite-parts.png) no-repeat; }
+
+#sub-nav { height: 356px; background: url(images/bg-leftmenu.jpg) no-repeat; }
+
+.show-schedule-date-item span { background: url(images/sprite-schedule-default.png) no-repeat; }
+.show-schedule-date-selected span { background-image: url(images/sprite-schedule-selected.png); }
+.show-schedule-date-item-1 span { background-position: 0 0; }
+.show-schedule-date-item-2 span { background-position: 0 -70px; }
+.show-schedule-date-item-3 span { background-position: 0 -140px; }
+.show-schedule-date-item-4 span { background-position: 0 -210px; }
+.show-schedule-date-item-5 span { background-position: 0 -280px; }
+.show-schedule-date-item-6 span { background-position: 0 -350px; }
+.show-schedule-date-item-7 span { background-position: 0 -420px; }
+
+#show-schedule-time .show-schedule-time-selected { border-color: #8665d4; }
+#show-editor { background: url(images/bg-showschedule-editor.jpg) no-repeat 12px 0; }
+
+#fashion { background: url(images/bg-fashionview.jpg) no-repeat; }
+
+.fashion-shop-comment { background-position: 0 0; }
+.fashion-shop-video{ background-position: 0 -81px; } 
+.fashion-shop-picture{ background-position: 0 -162px; } 
+.fashion-shop-makeup{ background-position: 0 -243px; }
+.fashion-shop-aee { background-position: 0 -324px; }
+
+#fashion-paging .fashion-paging-prev { background-position: 0 -405px; }
+#fashion-paging .fashion-paging-next { background-position: 0 -471px; }
+#fashion-paging .fashion-paging-selected { color: #8665d4; background: #fff; }
+
+#weibo { background: url(images/bg-weibo.jpg) no-repeat; }
+#weibo-elle-watching { color: #8665d4; }
