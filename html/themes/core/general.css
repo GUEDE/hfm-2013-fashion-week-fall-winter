@@ -1,0 +1,156 @@
+body { font: 12px/1.4 Verdana, Arial, Helvetica, sans-serif; }
+a { text-decoration: none; color: #333; }
+
+.clearfix { clear: both; }
+.cleartext { text-indent: -9999px; overflow: hidden; }
+
+/*
+ * jquery jscrollpane plugin
+ */
+.jspContainer { overflow: hidden; position: relative; }
+.jspPane { position: absolute; }
+.jspVerticalBar { position: absolute; top: 0; right: 0; width: 16px; height: 100%; background: red; }
+.jspHorizontalBar { position: absolute; bottom: 0; left: 0; width: 100%; height: 16px; background: red; }
+.jspVerticalBar *, .jspHorizontalBar * { margin: 0; padding: 0; }
+.jspCap { display: none; }
+.jspHorizontalBar .jspCap { float: left; }
+.jspTrack { background: #dde; position: relative; }
+.jspDrag { background: #bbd; position: relative; top: 0; left: 0; cursor: pointer; }
+.jspHorizontalBar .jspTrack, 
+.jspHorizontalBar .jspDrag { float: left; height: 100%; }
+.jspArrow { background: #50506d; text-indent: -20000px; display: block; cursor: pointer; }
+.jspArrow.jspDisabled { cursor: default; background: #80808d; }
+.jspVerticalBar .jspArrow { height: 16px; }
+.jspHorizontalBar .jspArrow { width: 16px; float: left; height: 100%; }
+.jspVerticalBar .jspArrow:focus { outline: none; }
+.jspCorner { background: #eeeef4; float: left; height: 100%; }
+/* for IE6 3 pixel bug */
+* html .jspCorner { margin: 0 -3px 0 0; }
+
+.sprite-buttons { background: url(images/sprite-buttons.png) no-repeat; }
+.sprite-icons { background: url(images/sprite-icons.png) no-repeat; }
+
+#container { width: 980px; margin: 0 auto; }
+#header { height: 465px; position: relative; }
+#content { margin-bottom: 50px; }
+#footer { margin-bottom: 200px; text-align: center; line-height: 30px; background: url(images/bg-footer.png) no-repeat 50%; }
+
+#main-nav { width: 280px; position: absolute; right: 0; bottom: 0; }
+#main-nav li { height: 53px; }
+#main-nav a { display: block; height: 100%; }
+#sub-nav { width: 86px; height: 309px; padding: 45px 7px 0; position: fixed; }
+#sub-nav li { height: 67px; }
+#sub-nav a { display: block; height: 100%; }
+
+#fashionshow { width: 302px; position: absolute; top: 182px; left: 339px; }
+#fashionshow-player { display: block; width: 100%; height: 204px; }
+#fashionshow-title { display: block; margin-top: 5px; text-align: center; }
+
+#focus { height: 529px; padding: 41px 0 0 14px; overflow: hidden; }
+#focus-kv { width: 472px; height: 487px; overflow: hidden; position: relative; float: left; }
+#focus-slideshow-title { width: 381px; height: 71px; position: absolute; left: 48px; bottom: 16px; z-index: 9990; }
+.focus-slideshow-overlay { width: 100%; height: 100%; background: #000; opacity: 0.5; filter: alpha(opacity=50); }
+.focus-slideshow-button { display: block; width: 39px; height: 60px; position: absolute; top: 6px; z-index: 9991; }
+.focus-slideshow-prev { left: 6px; background-position: 0 0; }
+.focus-slideshow-next { right: 6px; background-position: 0 -110px; }
+.focus-slideshow-text { width: 279px; height: 100%; font-size: 18px; text-align: center; color: #fff; position: absolute; top: 0; left: 51px; z-index: 9992; }
+.focus-slideshow-text strong { display: block; font-size: 26px; font-weight: 700; }
+
+#focus-articles { width: 494px; float: right; }
+#focus-articles li { height: 264px; }
+
+#show { padding-top: 93px; position: relative }
+#show-more { width: 118px; height: 38px; position: absolute; top: 3px; right: 0; }
+
+#show-schedule-date { width: 938px; margin: 0 auto; }
+.show-schedule-date-item { display: block; width: 126px; height: 70px; padding: 0 4px; float: left; }
+.show-schedule-date-item span { display: block; width: 100%; height: 100%; cursor: pointer; }
+.show-schedule-date-prev,
+.show-schedule-date-next { display: block; width: 16px; height: 27px; text-indent: -9999px; overflow: hidden; }
+.show-schedule-date-prev { background-position: 0 -220px; }
+.show-schedule-date-next { background-position: 0 -297px; }
+#show-schedule-time { width: 943px; padding: 11px 14px 26px; }
+#show-schedule-time li { height: 31px; padding: 0 8px; margin-bottom: 8px; line-height: 100%; border-left: solid 5px #000; float: left; }
+.show-name { display: block; margin-bottom: 4px; white-space: nowrap; }
+.show-time { color: #999; }
+.show-time span { margin-right: 3px; background: #e3e3e3; }
+
+#show-content { padding-bottom: 40px; background: #fff; }
+
+#show-pictures { width: 968px; padding: 0 6px 39px; }
+#show-pictures li { width: 309px; height: 453px; padding: 0 6px; float: left; }
+.show-picture-title { display: block; height: 26px; line-height: 26px; text-align: center; color: #fff; background: #000; }
+
+#show-editor { width: 926px; padding: 0 42px 0 12px; }
+#show-editor-info { padding: 10px; float: left; }
+#show-editor-article-pic { float: right; }
+#show-editor-article { width: 388px; position: relative; float: left; }
+#show-editor-article dl {  padding: 20px; font-size: 14px; }
+#show-editor-article dt { font-weight: 700; }
+#show-editor-article dd { color: #666; }
+.show-editor-article-more { width: 70px; height: 25px; position: absolute; top: 150px; left: 289px; }
+
+#fashion { padding-top: 100px; margin-bottom: 30px; position: relative; }
+#fashion-more { width: 118px; height: 38px; position: absolute; top: 3px; right: 0; }
+
+#fashion-nav { position: absolute; top: 3px; left: 329px; }
+#fashion-nav li { width: 121px; height: 43px; float: left; }
+#fashion-nav a { display: block; height: 100%; }
+
+#fashion-city { width: 980px; background: #fff; }
+.fashion-street { width: 300px; padding: 0 13px; float: left; }
+.fashion-shop { margin-bottom: 30px; border-bottom: solid 3px #000; }
+.fashion-shop-header { height: 31px; margin-bottom: 4px; }
+.fashion-shop-header a { display: block; height: 100%; }
+.fashion-shop-title { display: block; padding: 20px 0; margin-bottom: 12px; font-size: 14px; font-weight: 700; border-bottom: solid 1px #000; }
+.fashion-shop-desc { margin-bottom: 12px; }
+.fashion-shop-share { margin-bottom: 10px; float: right; }
+.fashion-shop-share dt,
+.fashion-shop-share dd { margin-left: 10px; float: left; }
+.fashion-shop-share a { display: block; width: 16px; height: 16px; }
+.fashion-shop-share .elle{ background-position: 0 0; } 
+.fashion-shop-share .space{ background-position: 0 -66px; } 
+.fashion-shop-share .tengxun{ background-position: 0 -132px; } 
+.fashion-shop-share .sina{ background-position: 0 -198px; } 
+.fashion-shop-share .renren{ background-position: 0 -264px; }
+
+#fashion-paging { height: 46px; text-align: center; background: #e2e2e2; }
+#fashion-paging ul { padding-top: 10px; }
+#fashion-paging li { display: inline; }
+#fashion-paging a { display: inline-block; }
+#fashion-paging .fashion-paging-item { padding: 2px 6px; margin: 0 3px; font-size: 20px; line-height: 100%; color: #666; }
+#fashion-paging .fashion-paging-button { width: 15px; height: 16px; margin: 0 18px; }
+/*for ie6, ie7*/
+#fashion-paging .fashion-paging-button { *margin-bottom: 3px; }
+
+#weibo { height: 606px; position: relative; }
+#weibo-mag-editor { left: 15px; }
+#weibo-web-editor { left: 333px; }
+.weibo-editors { width: 306px; height: 428px; padding-top: 42px; position: absolute; top: 86px; }
+.weibo-editors-content { width: 100%; height: 100%; overflow: hidden; }
+
+.weibo-editors-content .jspVerticalBar { width: 8px; }
+.weibo-editors-content .jspTrack { background: #EAEAEA; }
+.weibo-editors-content .jspDrag { background: #CFCFCF; }
+
+.weibo-editors-item { width: 270px; padding: 10px 10px 0 18px; }
+.weibo-editors-item-inner { padding-bottom: 18px; background: url(images/bg-split-line.png) repeat-x 0 100%; }
+.weibo-editors-item-noline { background: none; }
+.weibo-editors-avatar { float: left; }
+.weibo-editors-avatar img { padding: 2px; border: solid 1px #e6e6e6; background: #fff; }
+.weibo-editors-detail { width: 198px; float: right; }
+.weibo-editors-name { font-weight: 700; }
+.weibo-editors-msg { margin-bottom: 15px; color: #666; }
+.weibo-editors-msg a { color: #666; }
+
+#weibo-elle { width: 304px; height: 514px; position: absolute; top: 72px; right: 15px; }
+#weibo-elle-info { position: absolute; top: 12px; left: 11px; font-size: 14px; }
+#weibo-elle-avatar { width: 101px; height: 101px; padding: 5px 5px 6px 6px; margin-right: 10px; background: #fff; float: left;  }
+#weibo-elle-info dt { width: 170px; margin-bottom: 5px; font-weight: 700; float: left; }
+#weibo-elle-name { font-weight: 700; float: left; }
+#weibo-elle-name a { color: #fff; }
+#weibo-elle-watching { width: 63px; height: 24px; position: absolute; top: 81px; left: 137px; }
+#weibo-elle-msg { width: 230px; font-size: 14px; line-height: 1.6; color: #666; position: absolute; top: 172px; left: 31px; }
+#weibo-elle-more { width: 72px; height: 20px; position: absolute; top: 351px; left: 196px; }
+
+#list #fashion { margin-top: 61px; }
