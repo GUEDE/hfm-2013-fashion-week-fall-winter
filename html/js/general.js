@@ -1,12 +1,13 @@
 $(function() {
+	
 	window.pageName = $( 'body' ).attr( 'id' );
 	
 	//utilities.modules.add( modules.player );
-	utilities.modules.add( modules.menu );
-	utilities.modules.add( modules.fashionView );
+	//utilities.modules.add( modules.menu );
+	//utilities.modules.add( modules.fashionView );
 	
 	if ( window.pageName === 'home' ) {
-		utilities.modules.add( modules.slideshow );
+		//utilities.modules.add( modules.slideshow );
 		utilities.modules.add( modules.schedule );
 	}
 	

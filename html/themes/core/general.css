@@ -27,59 +27,57 @@ a { text-decoration: none; color: #333; }
 /* for IE6 3 pixel bug */
 * html .jspCorner { margin: 0 -3px 0 0; }
 
-.sprite-buttons { background: url(images/sprite-buttons.png) no-repeat; }
-.sprite-icons { background: url(images/sprite-icons.png) no-repeat; }
-
 #container { width: 980px; margin: 0 auto; }
-#header { height: 465px; position: relative; }
-#content { margin-bottom: 50px; }
+#header { height: 957px; position: relative; }
+#content { margin-bottom: 80px; }
 #footer { margin-bottom: 200px; text-align: center; line-height: 30px; background: url(images/bg-footer.png) no-repeat 50%; }
 
-#main-nav { width: 280px; position: absolute; right: 0; bottom: 0; }
-#main-nav li { height: 53px; }
-#main-nav a { display: block; height: 100%; }
-#sub-nav { width: 86px; height: 309px; padding: 45px 7px 0; position: fixed; }
-#sub-nav li { height: 67px; }
-#sub-nav a { display: block; height: 100%; }
-
-#fashionshow { width: 302px; position: absolute; top: 182px; left: 339px; }
+#fashionshow { width: 302px; position: absolute; top: 28px; right: 52px; }
 #fashionshow-player { display: block; width: 100%; height: 204px; }
-#fashionshow-title { display: block; margin-top: 5px; text-align: center; }
+#fashionshow-title { display: block; margin-top: 5px; text-align: center; color: #fff; }
 
-#focus { height: 529px; padding: 41px 0 0 14px; overflow: hidden; }
-#focus-kv { width: 472px; height: 487px; overflow: hidden; position: relative; float: left; }
-#focus-slideshow-title { width: 381px; height: 71px; position: absolute; left: 48px; bottom: 16px; z-index: 9990; }
-.focus-slideshow-overlay { width: 100%; height: 100%; background: #000; opacity: 0.5; filter: alpha(opacity=50); }
-.focus-slideshow-button { display: block; width: 39px; height: 60px; position: absolute; top: 6px; z-index: 9991; }
-.focus-slideshow-prev { left: 6px; background-position: 0 0; }
-.focus-slideshow-next { right: 6px; background-position: 0 -110px; }
-.focus-slideshow-text { width: 279px; height: 100%; font-size: 18px; text-align: center; color: #fff; position: absolute; top: 0; left: 51px; z-index: 9992; }
-.focus-slideshow-text strong { display: block; font-size: 26px; font-weight: 700; }
+#nav-main { width: 932px; height: 517px; position: absolute; top: 379px; left: 23px; }
+#nav-fashion-view { position: absolute; bottom: 0; left: 199px; }
+#nav-fashion-view li { margin-right: 11px; float: left; }
+#nav-fashion-view a { display: block; width: 109px; height: 60px; }
+#nav-quick { width: 137px; height: 280px; padding: 72px 0 0 1px; position: absolute; top: 0; right: 100%; }
+#nav-quick li { width: 111px; }
+#nav-quick a { display: block; height: 55px; }
+#nav-quick .focus { height: 53px; }
+#nav-quick .show { height: 54px; }
 
-#focus-articles { width: 494px; float: right; }
-#focus-articles li { height: 264px; }
+#focus { height: 558px; padding-top: 104px; position: relative; overflow: hidden; }
+#focus-more { width: 90px; height: 39px; position: absolute; top: 65px; right: 0; }
+#focus-left, 
+#focus-right { width: 245px; height: 558px; overflow: hidden; }
+#focus-left { float: left; }
+#focus-right { float: right; }
+#focus-center { width: 490px; height: 526px; margin-top: 16px; position: relative; float: left; }
+#focus-slideshow { width: 100%; height: 506px; overflow: hidden; }
+#focus-slideshow-title { width: 485px; height: 75px; padding-top: 5px; line-height: 1.2; text-align: center; color: #fff; background: url(images/bg-slideshow-overlay.png) no-repeat 50% 0; position: absolute; left: 0; bottom: 60px; z-index: 99; }
+#focus-slideshow-title span,
+#focus-slideshow-title strong { display: block; font-weight: 700;  }
+#focus-slideshow-title span { font-size: 22px; }
+#focus-slideshow-title strong { font-size: 28px; }
+#focus-slideshow-nav { height: 15px; padding: 5px 0 0 202px; text-align: center; background: #f0eee2; overflow: hidden; }
+#focus-slideshow-nav li { margin-right: 5px; float: left; }
+#focus-slideshow-nav a { display: block; width: 10px; height: 10px; text-indent: -999px; overflow: hidden; }
 
-#show { padding-top: 93px; position: relative }
-#show-more { width: 118px; height: 38px; position: absolute; top: 3px; right: 0; }
-
-#show-schedule-date { width: 938px; margin: 0 auto; }
-.show-schedule-date-item { display: block; width: 126px; height: 70px; padding: 0 4px; float: left; }
-.show-schedule-date-item span { display: block; width: 100%; height: 100%; cursor: pointer; }
-.show-schedule-date-prev,
-.show-schedule-date-next { display: block; width: 16px; height: 27px; text-indent: -9999px; overflow: hidden; }
-.show-schedule-date-prev { background-position: 0 -220px; }
-.show-schedule-date-next { background-position: 0 -297px; }
-#show-schedule-time { width: 943px; padding: 11px 14px 26px; }
-#show-schedule-time li { height: 31px; padding: 0 8px; margin-bottom: 8px; line-height: 100%; border-left: solid 5px #000; float: left; }
-.show-name { display: block; margin-bottom: 4px; white-space: nowrap; }
-.show-time { color: #999; }
-.show-time span { margin-right: 3px; background: #e3e3e3; }
-
-#show-content { padding-bottom: 40px; background: #fff; }
-
-#show-pictures { width: 968px; padding: 0 6px 39px; }
-#show-pictures li { width: 309px; height: 453px; padding: 0 6px; float: left; }
-.show-picture-title { display: block; height: 26px; line-height: 26px; text-align: center; color: #fff; background: #000; }
+#show { height: 600px; padding-top: 90px; position: relative }
+#show-more { width: 90px; height: 39px; position: absolute; top: 30px; right: 0; }
+#show-schedule { width: 938px; margin: 0 auto 13px; }
+.show-date { width: 126px; height: 70px; padding: 0 4px; float: left; }
+.show-date a { display: block; height: 100%; }
+.show-schedule-prev,
+.show-schedule-next { display: block; width: 16px; height: 27px; text-indent: -999px; overflow: hidden; }
+#show-content li { width: 154px; margin-right: 11px; float: left; }
+#show-content .show-item-last { margin: 0; }
+.show-time { color: #fff; }
+.show-time span { margin-right: 3px; }
+.show-gallery { display: block; width: 154px; height: 427px; position: relative; }
+.show-gallery span { display: none; width: 154px; height: 28px; background: url(images/bg-schedule-item.png) no-repeat; position: absolute; bottom: 0; left: 0; }
+.show-gallery:hover span { display: block; }
+.show-name { display: block; height: 52px; font-weight: 700; text-align: center; vertical-align: middle; color: #fff; background: #000; }
 
 #show-editor { width: 926px; padding: 0 42px 0 12px; }
 #show-editor-info { padding: 10px; float: left; }
