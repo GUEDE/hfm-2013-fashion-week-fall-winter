@@ -44,7 +44,7 @@ var modules = {
 			var title = $( slide ).find( 'img' ).attr( 'alt' );
 	        	
 	    	title = title.split( '-' );
-	    	$( '.focus-slideshow-text' ).html( '<strong>' + title[0] + '</strong>' + title[1] );
+	    	$( '#focus-slideshow-text' ).html( '<strong>' + title[0] + '</strong>' + title[1] );
 		},
 		init: function() {
 			var self = this,
@@ -53,8 +53,8 @@ var modules = {
 			this.setTitle( $firstSlide );
 			$( '#focus-slideshow' ).cycle({
 		        fx: 'scrollHorz',
-		        prev:    '.focus-slideshow-prev', 
-		        next:    '.focus-slideshow-next',
+		        prev:    '#focus-slideshow-prev', 
+		        next:    '#focus-slideshow-next',
 		        after: function( curr, next ) {
 		        	self.setTitle( next );
 		        }
@@ -99,16 +99,16 @@ var modules = {
 		},
 		
 		slideDate: function( start ) {
-			$( '#show-schedule-date' )
+			$( '#show-schedule' )
 				.simpleslide({
 					visible: 7,
 					auto: 0,
 					circular: false,
-					prevClass: 'show-schedule-date-prev',
-					nextClass: 'show-schedule-date-next',
+					prevClass: 'show-schedule-prev',
+					nextClass: 'show-schedule-next',
 					start: start
 				})
-				.find( '.show-schedule-date-prev, .show-schedule-date-next' )
+				.find( '.show-schedule-prev, .show-schedule-next' )
 				.addClass( 'sprite-buttons' )
 				.css( 'top', 15 );
 		},
