@@ -30,7 +30,7 @@ a { text-decoration: none; color: #777; }
 #container { width: 980px; margin: 0 auto; }
 #header { height: 957px; position: relative; }
 #content { margin-bottom: 80px; }
-#footer { margin-bottom: 200px; text-align: center; line-height: 30px; background: url(images/bg-footer.png) no-repeat 50%; }
+#footer { margin-bottom: 250px; text-align: center; color: #fff; }
 
 #fashionshow { width: 302px; position: absolute; top: 28px; right: 52px; }
 #fashionshow-player { display: block; width: 100%; height: 204px; }
@@ -48,8 +48,6 @@ a { text-decoration: none; color: #777; }
 
 #focus { height: 558px; padding-top: 104px; position: relative; overflow: hidden; }
 #focus-more { width: 90px; height: 39px; position: absolute; top: 65px; right: 0; }
-#focus-left, 
-#focus-right { width: 245px; height: 558px; overflow: hidden; }
 #focus-left { float: left; }
 #focus-right { float: right; }
 #focus-center { width: 490px; height: 526px; margin-top: 16px; position: relative; float: left; }
@@ -74,7 +72,7 @@ a { text-decoration: none; color: #777; }
 #show-content .show-item-last { margin: 0; }
 .show-time { color: #fff; }
 .show-time span { margin-right: 3px; }
-.show-gallery { display: block; width: 154px; height: 427px; overflow: hidden; position: relative; }
+.show-gallery { display: block; width: 154px; height: 427px; position: relative; }
 .show-gallery span { display: none; width: 154px; height: 28px; background: url(images/bg-schedule-item.png) no-repeat; position: absolute; bottom: 0; left: 0; }
 .show-gallery:hover span { display: block; }
 .show-name { display: block; height: 52px; overflow: hidden; font-weight: 700; text-align: center; color: #fff; background: #000; }
@@ -84,8 +82,8 @@ a { text-decoration: none; color: #777; }
 #editors-hit-more { font-weight: 700; position: absolute; bottom: 8px; right: 15px; }
 #editors-hit-content { padding-top: 8px; font-size: 14px; line-height: 1.6; }
 #editors-hit-content h3 { font-weight: 700; color: #000; }
-#editors-hit-editor { width: 136px; height: 210px; overflow: hidden; position: absolute; top: 8px; left: 16px; }
-#editors-hit-pic { width: 252px; height: 218px; overflow: hidden; position: absolute; top: 0; right: 24px; }
+#editors-hit-editor { position: absolute; top: 8px; left: 16px; }
+#editors-hit-pic { position: absolute; top: 0; right: 24px; }
 
 #fashion { padding-top: 102px; margin-bottom: 45px; position: relative; }
 #fashion-more { width: 90px; height: 39px; position: absolute; top: 38px; right: 0; }
@@ -108,44 +106,32 @@ a { text-decoration: none; color: #777; }
 .fashion-shop-share .qq-weibo { background-position: 0 -42px; } 
 .fashion-shop-share .sina { background-position: 0 -63px; } 
 .fashion-shop-share .renren { background-position: 0 -84px; }
-
-#fashion-paging { height: 46px; text-align: center; background: #e2e2e2; }
-#fashion-paging ul { padding-top: 10px; }
+#fashion-paging { text-align: center; }
 #fashion-paging li { display: inline; }
-#fashion-paging a { display: inline-block; }
-#fashion-paging .fashion-paging-item { padding: 2px 6px; margin: 0 3px; font-size: 20px; line-height: 100%; color: #666; }
-#fashion-paging .fashion-paging-button { width: 15px; height: 16px; margin: 0 18px; }
-/*for ie6, ie7*/
-#fashion-paging .fashion-paging-button { *margin-bottom: 3px; }
+#fashion-paging a { padding: 0 8px; margin: 0 5px; font-size: 30px; }
 
-#weibo { height: 606px; position: relative; }
-#weibo-mag-editor { left: 15px; }
-#weibo-web-editor { left: 333px; }
-.weibo-editors { width: 306px; height: 428px; padding-top: 42px; position: absolute; top: 86px; }
-.weibo-editors-content { width: 100%; height: 100%; overflow: hidden; }
-
-.weibo-editors-content .jspVerticalBar { width: 8px; }
-.weibo-editors-content .jspTrack { background: #EAEAEA; }
-.weibo-editors-content .jspDrag { background: #CFCFCF; }
-
-.weibo-editors-item { width: 270px; padding: 10px 10px 0 18px; }
-.weibo-editors-item-inner { padding-bottom: 18px; background: url(images/bg-split-line.png) repeat-x 0 100%; }
-.weibo-editors-item-noline { background: none; }
-.weibo-editors-avatar { float: left; }
-.weibo-editors-avatar img { padding: 2px; border: solid 1px #e6e6e6; background: #fff; }
-.weibo-editors-detail { width: 198px; float: right; }
-.weibo-editors-name { font-weight: 700; }
-.weibo-editors-msg { margin-bottom: 15px; color: #666; }
-.weibo-editors-msg a { color: #666; }
-
-#weibo-elle { width: 304px; height: 514px; position: absolute; top: 72px; right: 15px; }
-#weibo-elle-info { position: absolute; top: 12px; left: 11px; font-size: 14px; }
-#weibo-elle-avatar { width: 101px; height: 101px; padding: 5px 5px 6px 6px; margin-right: 10px; background: #fff; float: left;  }
-#weibo-elle-info dt { width: 170px; margin-bottom: 5px; font-weight: 700; float: left; }
-#weibo-elle-name { font-weight: 700; float: left; }
-#weibo-elle-name a { color: #fff; }
-#weibo-elle-watching { width: 63px; height: 24px; position: absolute; top: 81px; left: 137px; }
-#weibo-elle-msg { width: 230px; font-size: 14px; line-height: 1.6; color: #666; position: absolute; top: 172px; left: 31px; }
-#weibo-elle-more { width: 72px; height: 20px; position: absolute; top: 351px; left: 196px; }
-
-#list #fashion { margin-top: 61px; }
+#weibo { height: 490px; padding-top: 63px; line-height: 1.5; overflow: hidden; }
+#weibo-observers { margin-right: 17px; }
+#weibo-editors { margin-right: 15px; }
+.weibo-logs { width: 316px; height: 448px; padding-top: 42px; float: left;}
+.weibo-logs-content { width: 100%; height: 100%; overflow: hidden; }
+.weibo-logs-content .jspVerticalBar { width: 8px; }
+.weibo-logs-content .jspTrack { background: #EAEAEA; }
+.weibo-logs-content .jspDrag { background: #CFCFCF; }
+.weibo-log { width: 280px; padding: 10px 10px 0 18px; }
+.weibo-log-content { padding-bottom: 18px; background: url(images/bg-split-line.png) repeat-x 0 100%; }
+.weibo-log-last { background: none; }
+.weibo-log-avatar { float: left; }
+.weibo-log-avatar img { padding: 2px; border: solid 1px #e6e6e6; background: #fff; }
+.weibo-log-detail { padding-left: 70px; }
+.weibo-log-detail h3 { font-size: 14px; font-weight: 700; }
+.weibo-log-detail h3,
+.weibo-log-detail h3 a { color: #000; }
+.weibo-log-detail p { margin-bottom: 15px; }
+#weibo-elle { width: 316px; position: relative; float: right; }
+#weibo-elle-avatar { position: absolute; top: -1px; left: 10px;  }
+#weibo-elle-nickname { position: absolute; top: 26px; left: 132px; }
+#weibo-elle-nickname strong { display: block; margin-bottom: 8px; font-size: 16px; font-weight: 700; }
+#weibo-elle-log { width: 272px; height: 237px; font-size: 14px; position: absolute; top: 133px; left: 22px; overflow: hidden; }
+#weibo-elle-log-more { display: block; text-align: right; }
+#weibo-elle-log-more a { font-size: 12px; text-decoration: underline; color: #0068b7; }

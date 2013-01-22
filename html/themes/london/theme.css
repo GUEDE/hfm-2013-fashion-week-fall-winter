@@ -34,10 +34,7 @@
 */
 
 .fashion-shop-content { border-top: solid 3px #e31c1c; }
+#fashion-paging .fashion-paging-active { color: #000; background: #e31c1c; }
 
-#fashion-paging .fashion-paging-prev { background-position: 0 -324px; }
-#fashion-paging .fashion-paging-next { background-position: 0 -390px; }
-#fashion-paging .fashion-paging-selected { color: #0c86e3; background: #fff; }
-
-#weibo { background: url(images/bg-weibo.jpg) no-repeat; }
+#weibo { background: url(images/bg-weibo.png) no-repeat; }
 #weibo-elle-watching { color: #0c86e3; }
