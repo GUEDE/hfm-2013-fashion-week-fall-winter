@@ -1,25 +1,25 @@
 #home { background: #12171c url(images/bg-body-home.jpg) no-repeat 50% 0; }
 #list { background: #12171c url(images/bg-body-list.jpg) no-repeat 50% 0; }
 
-#nav-fashion-view a { background: url(images/sprite-nav-show.png) no-repeat; }
-#nav-fashion-view a:hover,
-#nav-fashion-view .active { background-image: url(images/sprite-nav-show-active.png); }
-#nav-fashion-view .comments { background-position: 0 0; }
-#nav-fashion-view .viewpoint { background-position: -109px 0; }
-#nav-fashion-view .makeup { background-position: -218px 0; }
-#nav-fashion-view .pop-hit { background-position: -327px 0; }
-#nav-fashion-view .elleshow { background-position: -436px 0; }
+#nav-fashion a { background: url(images/sprite-nav-fashion.png) no-repeat; }
+#nav-fashion a:hover,
+#nav-fashion .nav-fashion-active { background-image: url(images/sprite-nav-fashion-active.png); }
+#nav-fashion .comments { background-position: 0 0; }
+#nav-fashion .viewpoint { background-position: -109px 0; }
+#nav-fashion .makeup { background-position: -218px 0; }
+#nav-fashion .pop-hit { background-position: -327px 0; }
+#nav-fashion .elleshow { background-position: -436px 0; }
 #nav-quick { background: url(images/bg-nav-left.png) no-repeat; }
 
 #focus-slideshow-nav a { background: url(images/sprite-slideshow-buttons.png) no-repeat; }
-#focus-slideshow-nav .active { background-position: -15px 0; }
+#focus-slideshow-nav .focus-slideshow-active { background-position: -15px 0; }
 
 .show-schedule-prev,
 .show-schedule-next { background: url(images/sprite-schedule-buttons.png) no-repeat; }
 .show-schedule-prev { background-position: 0 0; }
 .show-schedule-next { background-position: -21px 0; }
 .show-time span { background: #e31c1c; }
-
+/*
 .show-schedule-date-item span { background: url(images/sprite-schedule-default.png) no-repeat; }
 .show-schedule-date-selected span { background-image: url(images/sprite-schedule-selected.png); }
 .show-schedule-date-disabled span { background-image: url(images/sprite-schedule-disabled.png); }
@@ -31,16 +31,9 @@
 .show-schedule-date-item-6 span { background-position: 0 -350px; }
 .show-schedule-date-item-7 span { background-position: 0 -420px; }
 .show-schedule-date-item-8 span { background-position: 0 -490px; }
+*/
 
-#show-schedule-time .show-schedule-time-selected { border-color: #0c86e3; }
-#show-editor { background: url(images/bg-showschedule-editor.jpg) no-repeat 12px 0; }
-
-#fashion { background: url(images/bg-fashionview.jpg) no-repeat; }
-
-.fashion-shop-comment { background-position: 0 0; }
-.fashion-shop-video{ background-position: 0 -81px; } 
-.fashion-shop-picture{ background-position: 0 -162px; } 
-.fashion-shop-makeup{ background-position: 0 -243px; }
+.fashion-shop-content { border-top: solid 3px #e31c1c; }
 
 #fashion-paging .fashion-paging-prev { background-position: 0 -324px; }
 #fashion-paging .fashion-paging-next { background-position: 0 -390px; }

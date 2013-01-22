@@ -1,5 +1,5 @@
-body { font: 12px/1.4 Verdana, Arial, Helvetica, sans-serif; }
-a { text-decoration: none; color: #333; }
+body { font: 12px/1.4 Verdana, Arial, Helvetica, sans-serif; color: #666; }
+a { text-decoration: none; color: #777; }
 
 .clearfix { clear: both; }
 .cleartext { text-indent: -9999px; overflow: hidden; }
@@ -37,9 +37,9 @@ a { text-decoration: none; color: #333; }
 #fashionshow-title { display: block; margin-top: 5px; text-align: center; color: #fff; }
 
 #nav-main { width: 932px; height: 517px; position: absolute; top: 379px; left: 23px; }
-#nav-fashion-view { position: absolute; bottom: 0; left: 199px; }
-#nav-fashion-view li { margin-right: 11px; float: left; }
-#nav-fashion-view a { display: block; width: 109px; height: 60px; }
+#nav-fashion { position: absolute; bottom: 0; left: 199px; }
+#nav-fashion li { margin-right: 11px; float: left; }
+#nav-fashion a { display: block; width: 109px; height: 60px; }
 #nav-quick { width: 137px; height: 280px; padding: 72px 0 0 1px; position: absolute; top: 0; right: 100%; }
 #nav-quick li { width: 111px; }
 #nav-quick a { display: block; height: 55px; }
@@ -74,43 +74,40 @@ a { text-decoration: none; color: #333; }
 #show-content .show-item-last { margin: 0; }
 .show-time { color: #fff; }
 .show-time span { margin-right: 3px; }
-.show-gallery { display: block; width: 154px; height: 427px; position: relative; }
+.show-gallery { display: block; width: 154px; height: 427px; overflow: hidden; position: relative; }
 .show-gallery span { display: none; width: 154px; height: 28px; background: url(images/bg-schedule-item.png) no-repeat; position: absolute; bottom: 0; left: 0; }
 .show-gallery:hover span { display: block; }
-.show-name { display: block; height: 52px; font-weight: 700; text-align: center; vertical-align: middle; color: #fff; background: #000; }
+.show-name { display: block; height: 52px; overflow: hidden; font-weight: 700; text-align: center; color: #fff; background: #000; }
 
-#show-editor { width: 926px; padding: 0 42px 0 12px; }
-#show-editor-info { padding: 10px; float: left; }
-#show-editor-article-pic { float: right; }
-#show-editor-article { width: 388px; position: relative; float: left; }
-#show-editor-article dl {  padding: 20px; font-size: 14px; }
-#show-editor-article dt { font-weight: 700; }
-#show-editor-article dd { color: #666; }
-.show-editor-article-more { width: 70px; height: 25px; position: absolute; top: 150px; left: 289px; }
+#editors-hit { height: 173px; padding: 59px 292px 0 165px; position: relative; }
+#editors-hit-header { height: 50px; background: url(images/bg-split-line.png) repeat-x 0 100%; position: relative; overflow: hidden; }
+#editors-hit-more { font-weight: 700; position: absolute; bottom: 8px; right: 15px; }
+#editors-hit-content { padding-top: 8px; font-size: 14px; line-height: 1.6; }
+#editors-hit-content h3 { font-weight: 700; color: #000; }
+#editors-hit-editor { width: 136px; height: 210px; overflow: hidden; position: absolute; top: 8px; left: 16px; }
+#editors-hit-pic { width: 252px; height: 218px; overflow: hidden; position: absolute; top: 0; right: 24px; }
 
-#fashion { padding-top: 100px; margin-bottom: 30px; position: relative; }
-#fashion-more { width: 118px; height: 38px; position: absolute; top: 3px; right: 0; }
-
-#fashion-nav { position: absolute; top: 3px; left: 329px; }
-#fashion-nav li { width: 121px; height: 43px; float: left; }
-#fashion-nav a { display: block; height: 100%; }
-
-#fashion-city { width: 980px; background: #fff; }
-.fashion-street { width: 300px; padding: 0 13px; float: left; }
-.fashion-shop { margin-bottom: 30px; border-bottom: solid 3px #000; }
-.fashion-shop-header { height: 31px; margin-bottom: 4px; }
+#fashion { padding-top: 102px; margin-bottom: 45px; position: relative; }
+#fashion-more { width: 90px; height: 39px; position: absolute; top: 38px; right: 0; }
+#fashion-city { width: 980px; overflow: hidden; }
+.fashion-street { width: 230px; margin-right: 20px; float: left; }
+.fashion-street-last { margin: 0; }
+.fashion-shop { margin-bottom: 10px; }
+.fashion-shop-header { height: 20px; margin-bottom: 5px; background: url(images/sprite-fashionshow-headers.png) no-repeat; }
 .fashion-shop-header a { display: block; height: 100%; }
-.fashion-shop-title { display: block; padding: 20px 0; margin-bottom: 12px; font-size: 14px; font-weight: 700; border-bottom: solid 1px #000; }
-.fashion-shop-desc { margin-bottom: 12px; }
-.fashion-shop-share { margin-bottom: 10px; float: right; }
-.fashion-shop-share dt,
-.fashion-shop-share dd { margin-left: 10px; float: left; }
-.fashion-shop-share a { display: block; width: 16px; height: 16px; }
-.fashion-shop-share .elle{ background-position: 0 0; } 
-.fashion-shop-share .space{ background-position: 0 -66px; } 
-.fashion-shop-share .tengxun{ background-position: 0 -132px; } 
-.fashion-shop-share .sina{ background-position: 0 -198px; } 
-.fashion-shop-share .renren{ background-position: 0 -264px; }
+.fashion-shop-comment { background-position: 0 0; }
+.fashion-shop-viewpoint { background-position: 0 -24px; } 
+.fashion-shop-makeup { background-position: 0 -47px; } 
+.fashion-shop-pophit { background-position: 0 -71px; }
+.fashion-shop-desc { margin-top: -20px; padding: 25px 10px 10px; font-size: 14px; color: #fff; background: url(images/bg-fashion-item.png) no-repeat; position: relative; }
+.fashion-shop-share { margin-top: 10px; overflow: hidden; }
+.fashion-shop-share li { margin-left: 8px; float: right; }
+.fashion-shop-share a { display: block; width: 16px; height: 16px; background: url(images/sprite-icons-weibo.png) no-repeat; }
+.fashion-shop-share .elle { background-position: 0 0; } 
+.fashion-shop-share .qq-space { background-position: 0 -21px; } 
+.fashion-shop-share .qq-weibo { background-position: 0 -42px; } 
+.fashion-shop-share .sina { background-position: 0 -63px; } 
+.fashion-shop-share .renren { background-position: 0 -84px; }
 
 #fashion-paging { height: 46px; text-align: center; background: #e2e2e2; }
 #fashion-paging ul { padding-top: 10px; }
