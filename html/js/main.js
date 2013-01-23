@@ -4,9 +4,16 @@ require.config({
 	}
 });
 
-require(['jquery', 'navigator'], function($, nav) {
+require(['jquery', 'utilities', 'navigator', 'slideshow'], function($, util, nav, slide) {
 	$(function() {
-		nav.init();
+		var page = document.body.id;
+		
+		if (page === 'home') {
+			util.modules.add(nav);
+			util.modules.add(slide)
+		}
+		util.modules.exec();
+		
 		$('.show-gallery').hover(function() {
 			$(this).find('span').toggle();
 		});

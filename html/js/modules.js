@@ -1,26 +1,5 @@
 var modules = {
-	slideshow: {
-		setTitle: function( slide ) {
-			var title = $( slide ).find( 'img' ).attr( 'alt' );
-	        	
-	    	title = title.split( '-' );
-	    	$( '#focus-slideshow-text' ).html( '<strong>' + title[0] + '</strong>' + title[1] );
-		},
-		init: function() {
-			var self = this,
-				$firstSlide = $( '#focus-slideshow :first' );
-			
-			this.setTitle( $firstSlide );
-			$( '#focus-slideshow' ).cycle({
-		        fx: 'scrollHorz',
-		        prev:    '#focus-slideshow-prev', 
-		        next:    '#focus-slideshow-next',
-		        after: function( curr, next ) {
-		        	self.setTitle( next );
-		        }
-		    }); 
-		}
-	},
+	
 	
 	schedule: {
 		_city: '',

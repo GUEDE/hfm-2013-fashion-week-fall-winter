@@ -11,8 +11,8 @@
 #nav-fashion .elleshow { background-position: -436px 0; }
 #nav-quick { background: url(images/bg-nav-left.png) no-repeat; }
 
-#focus-slideshow-nav a { background: url(images/sprite-slideshow-buttons.png) no-repeat; }
-#focus-slideshow-nav .focus-slideshow-active { background-position: -15px 0; }
+#focus-slideshow-nav li a { background: url(images/sprite-slideshow-buttons.png) no-repeat; }
+#focus-slideshow-nav .focus-slideshow-nav-active a { background-position: -15px 0; }
 
 .show-schedule-prev,
 .show-schedule-next { background: url(images/sprite-schedule-buttons.png) no-repeat; }

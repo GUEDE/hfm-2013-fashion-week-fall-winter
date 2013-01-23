@@ -1,19 +1,22 @@
 define(['utilities'], function(util) {
 	return {
 		_isSupportFixed: false,
-		setPosition: function() {
-			var pos = {
-				left: ($(document).width() - $('#container').width()) / 2 - $('#nav-quick').outerWidth(),
-				top: this._isSupportFixed ? 0 : $(document).scrollTop()
-			};
+		_setPosition: function() {
+			var $nav = $('#nav-quick'),
+				scrollTop = $(document).scrollTop();
 			
-			if (this._isSupportFixed) {
-				
+			if (scrollTop > $('#header').height() - 100) {
+				$nav.fadeIn().css(
+					this._isSupportFixed ? 'left' : 'top',
+					this._isSupportFixed ? 
+						( $(document).width() - $('#container').width() ) / 2 - $('#nav-quick').outerWidth() :
+						scrollTop
+				);
+			} else {
+				$nav.fadeOut();
 			}
-				
-			$('#nav-quick').css(pos);
 		},
-		setPositionProperties: function() {
+		_setPositionProperties: function() {
 			if (this._isSupportFixed) {
 				$('#nav-quick').css({
 					'position': 'fixed',
@@ -25,11 +28,11 @@ define(['utilities'], function(util) {
 			var _self = this;
 			
 			this._isSupportFixed = util.isSupportFixed();
-			this.setPositionProperties();
-			this.setPosition();
+			this._setPositionProperties();
+			this._setPosition();
 			
-			$(window).bind('scroll', function() {
-				utilities.throttle(_self.setPosition, _self);
+			$(window).bind('resize scroll', function() {
+				util.throttle(_self._setPosition, _self);
 			});
 		}
 	};

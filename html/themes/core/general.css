@@ -49,7 +49,7 @@ a { text-decoration: none; color: #777; }
 #nav-fashion { position: absolute; bottom: 0; left: 199px; }
 #nav-fashion li { margin-right: 11px; float: left; }
 #nav-fashion a { display: block; width: 109px; height: 60px; }
-#nav-quick { width: 137px; height: 280px; padding: 72px 0 0 1px; position: absolute; top: 0; right: 100%; }
+#nav-quick { display: none; width: 137px; height: 280px; padding: 72px 0 0 1px; position: absolute; top: 0; right: 100%; }
 #nav-quick li { width: 111px; }
 #nav-quick a { display: block; height: 55px; }
 #nav-quick .focus { height: 53px; }
