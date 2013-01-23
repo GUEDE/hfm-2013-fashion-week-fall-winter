@@ -6,16 +6,18 @@
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="stylesheet" href="themes/core/core.css" />
 		<link rel="stylesheet" href="themes/london/theme.css" />
-		<script src="js/libs/jquery-1.7.2.js"></script>
-		<script src="js/libs/jquery.cycle.all.js"></script>
-		<script src="js/libs/jquery.mousewheel.js"></script>
-		<script src="js/libs/jquery.jscrollpane.min.js"></script>
-		<script src="js/libs/jquery-simpleslide.js"></script>
-		<script src="js/libs/jquery.blockUI.js"></script>
-		<script src="js/libs/flowplayer-3.2.11.min.js"></script>
-		<script src="js/utilities.js"></script>
-		<script src="js/modules.js"></script>
-		<script src="js/general.js"></script>
+		<script data-main="js/main" src="js/libs/require.js"></script>
+		<!--[if IE 6]>
+		<script src="js/libs/DD_belatedPNG_0.0.8a-min.js"></script>
+		<script>
+			DD_belatedPNG.fix('#nav-quick, #nav-fashion a, ' + 
+				'#focus-slideshow-title, ' + 
+				'#editors-hit-header img, ' + 
+				'.show-gallery span, ' +
+				'.fashion-shop-header a, .fashion-shop-desc, .fashion-shop-share a, ' + 
+				'#weibo');
+		</script>
+		<![endif]-->
 	</head>
 	<body id="home" data-city="london">
 		<div id="container">
@@ -40,7 +42,7 @@
 						<a class="cleartext makeup" href="">makeup</a>
 					</li>
 					<li>
-						<a class="cleartext pop-hit" href="">pop hit</a>
+						<a class="cleartext pophit" href="">pop hit</a>
 					</li>
 					<li>
 						<a class="cleartext elleshow" href="">elleshow</a>
@@ -67,44 +69,46 @@
 			<div id="content">
 				<div id="focus">
 					<a id="focus-more" class="cleartext" href="">more</a>
-					<a id="focus-left" href="">
-						<img width="245" height="558" alt="" src="images/focus-left-london.jpg" />
-					</a>
-					<a id="focus-right" href="">
-						<img width="245" height="558" alt="" src="images/focus-right-london.jpg" />
-					</a>
-					<div id="focus-center">
-						<!--2行标题间用‘-’中横杠分割-->
-						<ul id="focus-slideshow">
-							<li>
-								<a href=""><img width="490" height="506" src="images/focus-slideshow-1.jpg" alt="1标题较小的字-1标题较大的字" /></a>
-							</li>
-							<li>
-								<a href=""><img width="490" height="506" src="images/focus-slideshow-2.jpg" alt="2标题较小的字-2标题较大的字" /></a>
-							</li>
-							<li>
-								<a href=""><img width="490" height="506" src="images/focus-slideshow-3.jpg" alt="3标题较小的字-3标题较大的字" /></a>
-							</li>
-							<li>
-								<a href=""><img width="490" height="506" src="images/focus-slideshow-4.jpg" alt="4标题较小的字-5标题较大的字" /></a>
-							</li>
-							<li>
-								<a href=""><img width="490" height="506" src="images/focus-slideshow-5.jpg" alt="5标题较小的字-5标题较大的字" /></a>
-							</li>
-						</ul>
-						<p id="focus-slideshow-title">
-							<span>1标题较小的字</span>
-							<strong>1标题较大的字</strong>
-						</p>
-						<ul id="focus-slideshow-nav">
-							<li><a class="focus-slideshow-active" href="">1</a></li>
-							<li><a href="">2</a></li>
-							<li><a href="">3</a></li>
-							<li><a href="">4</a></li>
-							<li><a href="">5</a></li>
-							<li><a href="">6</a></li>
-						</ul>
-					</div>
+					<div id="focus-content">
+						<a id="focus-left" href="">
+							<img width="245" height="558" alt="" src="images/focus-left-london.jpg" />
+						</a>
+						<a id="focus-right" href="">
+							<img width="245" height="558" alt="" src="images/focus-right-london.jpg" />
+						</a>
+						<div id="focus-center">
+							<!--2行标题间用‘-’中横杠分割-->
+							<ul id="focus-slideshow">
+								<li>
+									<a href=""><img width="490" height="506" src="images/focus-slideshow-1.jpg" alt="1标题较小的字-1标题较大的字" /></a>
+								</li>
+								<li>
+									<a href=""><img width="490" height="506" src="images/focus-slideshow-2.jpg" alt="2标题较小的字-2标题较大的字" /></a>
+								</li>
+								<li>
+									<a href=""><img width="490" height="506" src="images/focus-slideshow-3.jpg" alt="3标题较小的字-3标题较大的字" /></a>
+								</li>
+								<li>
+									<a href=""><img width="490" height="506" src="images/focus-slideshow-4.jpg" alt="4标题较小的字-5标题较大的字" /></a>
+								</li>
+								<li>
+									<a href=""><img width="490" height="506" src="images/focus-slideshow-5.jpg" alt="5标题较小的字-5标题较大的字" /></a>
+								</li>
+							</ul>
+							<p id="focus-slideshow-title">
+								<span>1标题较小的字</span>
+								<strong>1标题较大的字</strong>
+							</p>
+							<ul id="focus-slideshow-nav">
+								<li><a class="focus-slideshow-active" href="">1</a></li>
+								<li><a href="">2</a></li>
+								<li><a href="">3</a></li>
+								<li><a href="">4</a></li>
+								<li><a href="">5</a></li>
+								<li><a href="">6</a></li>
+							</ul>
+						</div>
+					</div>	
 				</div>
 				<div id="show">
 					<a id="show-more" class="cleartext" href="">more</a>
@@ -203,8 +207,8 @@
 					<div id="fashion-city" data-display-type="paging">
 						<div class="fashion-street">
 							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-comment">
-									<a class="cleartext" href="" target="_blank">comment</a>
+								<h2 class="fashion-shop-header">
+									<a class="cleartext comments" href="" target="_blank">comment</a>
 								</h2>
 								<div class="fashion-shop-content">
 									<p>
@@ -235,8 +239,8 @@
 								</div>
 							</div>
 							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-makeup">
-									<a class="cleartext" href="" target="_blank">makeup</a>
+								<h2 class="fashion-shop-header">
+									<a class="cleartext makeup" href="" target="_blank">makeup</a>
 								</h2>
 								<div class="fashion-shop-content">
 									<p>
@@ -269,8 +273,8 @@
 						</div>
 						<div class="fashion-street">
 							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-viewpoint">
-									<a class="cleartext" href="" target="_blank">viewpoint</a>
+								<h2 class="fashion-shop-header">
+									<a class="cleartext viewpoint" href="" target="_blank">viewpoint</a>
 								</h2>
 								<div class="fashion-shop-content">
 									<p>
@@ -303,8 +307,9 @@
 						</div>
 						<div class="fashion-street">
 							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-makeup">
-									<a class="cleartext" href="" target="_blank">makeup</a>
+								<h2 class="fashion-shop-header">
+									<!--comments viewpoint makeup pophit-->
+									<a class="cleartext makeup" href="" target="_blank">makeup</a>
 								</h2>
 								<div class="fashion-shop-content">
 									<p>
@@ -337,8 +342,8 @@
 						</div>
 						<div class="fashion-street fashion-street-last">
 							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-pophit">
-									<a class="cleartext" href="" target="_blank">pophit</a>
+								<h2 class="fashion-shop-header">
+									<a class="cleartext pophit" href="" target="_blank">pophit</a>
 								</h2>
 								<div class="fashion-shop-content">
 									<p>

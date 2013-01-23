@@ -1,44 +1,4 @@
 var modules = {
-	player: {
-		init: function() {
-			flowplayer( 'fashionshow-player', 'coms/flowplayer-3.2.14.swf', {
-				clip: {
-					autoPlay: false,
-					autoBuffering: true
-				}
-			});
-		}
-	},
-	
-	menu: {
-		_isSupportFixed: false,
-		
-		setPosition: function() {
-			var pos = {
-				left: ( $( document ).width() - $( '#container' ).width() ) / 2 - $( '#sub-nav' ).outerWidth(),
-				top: 100 + ( this._isSupportFixed ? 0 : $( document ).scrollTop() )
-			};
-				
-			$( '#sub-nav' ).css( pos );
-		},
-		setPositionProperty: function() {
-			if ( !this._isSupportFixed ) {
-				$( '#sub-nav' ).css( 'position', 'absolute' );
-			}
-		},
-		init: function() {
-			var self = this;
-			
-			this._isSupportFixed = utilities.isSupportFixed();
-			this.setPositionProperty();
-			this.setPosition();
-			
-			$( window ).bind( 'scroll', function() {
-				utilities.throttle( self.setPosition, self );
-			});
-		}
-	},
-	
 	slideshow: {
 		setTitle: function( slide ) {
 			var title = $( slide ).find( 'img' ).attr( 'alt' );

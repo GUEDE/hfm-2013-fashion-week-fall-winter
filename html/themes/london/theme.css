@@ -7,7 +7,7 @@
 #nav-fashion .comments { background-position: 0 0; }
 #nav-fashion .viewpoint { background-position: -109px 0; }
 #nav-fashion .makeup { background-position: -218px 0; }
-#nav-fashion .pop-hit { background-position: -327px 0; }
+#nav-fashion .pophit { background-position: -327px 0; }
 #nav-fashion .elleshow { background-position: -436px 0; }
 #nav-quick { background: url(images/bg-nav-left.png) no-repeat; }
 
@@ -18,7 +18,7 @@
 .show-schedule-next { background: url(images/sprite-schedule-buttons.png) no-repeat; }
 .show-schedule-prev { background-position: 0 0; }
 .show-schedule-next { background-position: -21px 0; }
-.show-time span { background: #e31c1c; }
+.show-time span { color: #fff; background: #e31c1c; }
 /*
 .show-schedule-date-item span { background: url(images/sprite-schedule-default.png) no-repeat; }
 .show-schedule-date-selected span { background-image: url(images/sprite-schedule-selected.png); }
@@ -37,4 +37,3 @@
 #fashion-paging .fashion-paging-active { color: #000; background: #e31c1c; }
 
 #weibo { background: url(images/bg-weibo.png) no-repeat; }
-#weibo-elle-watching { color: #0c86e3; }

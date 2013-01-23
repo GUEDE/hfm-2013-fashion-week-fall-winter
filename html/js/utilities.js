@@ -14,7 +14,7 @@ var utilities = {
 
 		return args;
 	},
-	
+	//yes
 	throttle: function( method, context ){
 	    clearTimeout( method.tId );
 	    
@@ -22,7 +22,7 @@ var utilities = {
 	        method.call( context );
 	    }, 100 );
 	},
-	
+	//yes
 	isSupportFixed: function() {
 		var outer = document.createElement( 'div' ), 
 			inner = document.createElement( 'div' );
@@ -72,3 +72,7 @@ var utilities = {
 		}
 	}
 };
+
+define(function() {
+	return utilities;
+});
