@@ -90,6 +90,7 @@ a { text-decoration: none; color: #777; }
 .show-gallery { display: block; width: 154px; height: 427px; position: relative; }
 .show-gallery span { display: none; width: 100%; height: 28px; background: url(images/bg-schedule-item.png) no-repeat; position: absolute; bottom: 0; left: 0; }
 .show-name { display: block; height: 52px; overflow: hidden; font-weight: 700; text-align: center; color: #fff; background: #000; }
+.show-name span { display: block; }
 
 /*
  * editor's hit
@@ -143,7 +144,7 @@ a { text-decoration: none; color: #777; }
 .weibo-logs-content .jspDrag { background: #CFCFCF; }
 .weibo-log { width: 280px; padding: 10px 10px 0 18px; }
 .weibo-log-content { padding-bottom: 18px; background: url(images/bg-split-line.png) repeat-x 0 100%; }
-.weibo-log-last { background: none; }
+.weibo-log-last .weibo-log-content { background: none; }
 .weibo-log-avatar { float: left; }
 .weibo-log-avatar img { padding: 2px; border: solid 1px #e6e6e6; background: #fff; }
 .weibo-log-detail { padding-left: 70px; }

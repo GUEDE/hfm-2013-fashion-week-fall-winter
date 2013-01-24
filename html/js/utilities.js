@@ -15,15 +15,13 @@
 	
 			return args;
 		},
-		//yes
 		throttle: function(method, context) {
 			clearTimeout(method.tId);
 	
 			method.tId = setTimeout(function() {
 				method.call(context);
-			}, 250);
+			}, 150);
 		},
-		//yes
 		isSupportFixed: function() {
 			var outer = document.createElement('div'), 
 				inner = document.createElement('div');
@@ -42,19 +40,6 @@
 			}
 			return true;
 		},
-		
-		dateFormat: function( date, format ) {
-		
-			var _zeroPad = function( num ) {
-				var s = '0' + num;
-				return s.substring( s.length - 2 );
-			};
-			
-			return format.replace( 'yy', date.getFullYear() )
-				.replace( 'mm', _zeroPad(date.getMonth() + 1) )
-				.replace( 'dd', _zeroPad(date.getDate()) );
-		},
-		//yes
 		modules: {
 			add: function(module) {
 				this._modules = this._modules || [];

@@ -19,19 +19,18 @@
 .show-schedule-prev { background-position: 0 0; }
 .show-schedule-next { background-position: -21px 0; }
 .show-time span { color: #fff; background: #e31c1c; }
-/*
-.show-schedule-date-item span { background: url(images/sprite-schedule-default.png) no-repeat; }
-.show-schedule-date-selected span { background-image: url(images/sprite-schedule-selected.png); }
-.show-schedule-date-disabled span { background-image: url(images/sprite-schedule-disabled.png); }
-.show-schedule-date-item-1 span { background-position: 0 0; }
-.show-schedule-date-item-2 span { background-position: 0 -70px; }
-.show-schedule-date-item-3 span { background-position: 0 -140px; }
-.show-schedule-date-item-4 span { background-position: 0 -210px; }
-.show-schedule-date-item-5 span { background-position: 0 -280px; }
-.show-schedule-date-item-6 span { background-position: 0 -350px; }
-.show-schedule-date-item-7 span { background-position: 0 -420px; }
-.show-schedule-date-item-8 span { background-position: 0 -490px; }
-*/
+
+.show-date a { background: url(images/sprite-schedule-default.png) no-repeat; }
+.show-date-active a { background-image: url(images/sprite-schedule-selected.png); }
+.show-date-disabled a { background-image: url(images/sprite-schedule-disabled.png); }
+.show-date-1 a { background-position: 0 0; }
+.show-date-2 a { background-position: 0 -70px; }
+.show-date-3 a{ background-position: 0 -140px; }
+.show-date-4 a { background-position: 0 -210px; }
+.show-date-5 a { background-position: 0 -280px; }
+.show-date-6 a { background-position: 0 -350px; }
+.show-date-7 a { background-position: 0 -420px; }
+.show-date-8 a { background-position: 0 -490px; }
 
 .fashion-shop-content { border-top: solid 3px #e31c1c; }
 #fashion-paging .fashion-paging-active { color: #000; background: #e31c1c; }

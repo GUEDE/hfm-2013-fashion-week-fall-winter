@@ -1,22 +1,46 @@
 require.config({
-	paths: {
-		'jquery': 'libs/jquery-1.8.3.min'
+	shim: {
+		'libs/swfobject': {
+			exports: 'swfobject'
+		},
+		'libs/globalize': {
+			exports: 'Globalize'
+		}
 	}
 });
 
-require(['jquery', 'utilities', 'navigator', 'slideshow'], function($, util, nav, slide) {
-	$(function() {
-		var page = document.body.id;
+require(['utilities',
+	'nav-main' , 
+	'nav-quick',
+	'focus-slideshow', 
+	'show-schedule',
+	'weibo-logs'], function(util, mainNav, subNav, slide, schedule, scrollbar) {
 		
-		if (page === 'home') {
-			util.modules.add(nav);
-			util.modules.add(slide)
+	$(function() {
+		if (document.body.id === 'home') {
+			util.modules.add(mainNav);
+			util.modules.add(subNav);
+			util.modules.add(slide);
+			util.modules.add(schedule);
 		}
 		util.modules.exec();
-		
-		$('.show-gallery').hover(function() {
-			$(this).find('span').toggle();
-		});
-		//swfobject.embedSWF('swf/nav-main-newyork.swf', 'nav-main', '932', '517', '9.0.0');
 	});
+	
+	var _load = function() {
+		if (document.body.id === 'home') {
+			util.modules.add(scrollbar);
+			util.modules.exec();
+		}
+	};
+	
+	if (window._onloaded) {
+		_load();
+	} else {
+		$(window).on('load', _load);
+	}
 });
+
+// for IE
+window.onload = function () {
+	window._onloaded = true;
+};

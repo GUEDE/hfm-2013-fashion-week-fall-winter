@@ -1,4 +1,5 @@
 define(['utilities'], function(util) {
+	
 	return {
 		_isSupportFixed: false,
 		_setPosition: function() {
@@ -24,6 +25,8 @@ define(['utilities'], function(util) {
 				});
 			}
 		},
+		
+		name: 'nav-quick',
 		init: function() {
 			var _self = this;
 			

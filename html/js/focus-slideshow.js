@@ -1,4 +1,5 @@
 define(['libs/jquery.cycle.all.min'], function() {
+	
 	return {
 		_before: function() {
 			$('#focus-slideshow-title').find('span, strong').fadeOut();
@@ -14,6 +15,8 @@ define(['libs/jquery.cycle.all.min'], function() {
 	    		.html('<span>' + text[0] + '</span><strong>' + text[1] + '</strong>')
 	    		.fadeIn();
 	   	},
+	   	
+	   	name: 'focus-slideshow',
 		init: function() {
 			$('#focus-slideshow').cycle({
 		        fx: 'scrollHorz',
