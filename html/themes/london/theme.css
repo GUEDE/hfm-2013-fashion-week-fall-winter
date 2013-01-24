@@ -33,6 +33,6 @@
 .show-date-8 a { background-position: 0 -490px; }
 
 .fashion-shop-content { border-top: solid 3px #e31c1c; }
-#fashion-paging .fashion-paging-active { color: #000; background: #e31c1c; }
+#fashion-paging .fashion-paging-active a { color: #000; background: #e31c1c; }
 
 #weibo { background: url(images/bg-weibo.png) no-repeat; }

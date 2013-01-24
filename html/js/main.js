@@ -10,18 +10,19 @@ require.config({
 });
 
 require(['utilities',
+	'fashion-city',
+	'weibo-logs',
 	'nav-main' , 
 	'nav-quick',
 	'focus-slideshow', 
-	'show-schedule',
-	'weibo-logs'], function(util, mainNav, subNav, slide, schedule, scrollbar) {
+	'show-schedule'], function(util, fashion, scrollbar, mainNav, subNav, slide, schedule) {
 		
+	var modules = Array.prototype.slice.call(arguments, 3);
+	
 	$(function() {
+		util.modules.add(fashion);
 		if (document.body.id === 'home') {
-			util.modules.add(mainNav);
-			util.modules.add(subNav);
-			util.modules.add(slide);
-			util.modules.add(schedule);
+			util.modules.add(modules);
 		}
 		util.modules.exec();
 	});
@@ -33,7 +34,7 @@ require(['utilities',
 		}
 	};
 	
-	if (window._onloaded) {
+	if (window._loaded) {
 		_load();
 	} else {
 		$(window).on('load', _load);
@@ -41,6 +42,6 @@ require(['utilities',
 });
 
 // for IE
-window.onload = function () {
-	window._onloaded = true;
-};
+$(window).on('load', function() {
+	window._loaded = true;
+});

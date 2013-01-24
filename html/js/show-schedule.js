@@ -32,14 +32,14 @@ define(['libs/globalize', 'libs/jquery.simpleslide'], function(Globalize) {
 					nextClass: 'show-schedule-next',
 					start: start
 				})
-				.css('top', 15);
+				.find('.show-schedule-prev, .show-schedule-next').css('top', 15);
 				
 			this._refresh(date);
 		},
 		_refresh: function(date) {
-			var _self = this, shows = [], $content = $('#show-content');
+			var _self = this, shows = [], $loading;
 			
-			$content.fadeTo('fast', 0.5);
+			$loading = $('#show .loading').fadeIn();
 			$.get(REQUEST_URL, {
 				city: _self._city,
 				date: date
@@ -51,7 +51,8 @@ define(['libs/globalize', 'libs/jquery.simpleslide'], function(Globalize) {
 						}
 					});
 				}
-				$content.html( shows.join('') )
+				
+				$('#show-content').html( shows.join('') )
 					.find('.show-name span').each(function() {
 						var h = $(this).height();
 						$(this).css({
@@ -62,8 +63,9 @@ define(['libs/globalize', 'libs/jquery.simpleslide'], function(Globalize) {
 						});
 					})
 				.end()
-					.find('li:last').addClass('show-item-last')
-				.end().fadeTo('fast', 1);
+					.find('li:last').addClass('show-item-last');
+				
+				$loading.delay(800).fadeOut();
 				
 			}, 'jsonp');
 		},

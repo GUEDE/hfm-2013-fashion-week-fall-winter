@@ -34,6 +34,6 @@
 */
 
 .fashion-shop-content { border-top: solid 3px #ff0; }
-#fashion-paging .fashion-paging-active { color: #000; background: #ff0; }
+#fashion-paging .fashion-paging-active a { color: #000; background: #ff0; }
 
 #weibo { background: url(images/bg-weibo.png) no-repeat; }
