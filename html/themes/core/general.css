@@ -4,7 +4,9 @@ a { text-decoration: none; color: #777; }
 .clearfix { clear: both; }
 .cleartext { text-indent: -9999px; overflow: hidden; }
 .loading { display: none; width: 72px; padding: 8px 10px; font-size: 14px; font-weight: 700; color: #000; 
-	border: solid 1px #fc6; background: #fc0; position: absolute; left: 50%; z-index: 99; margin-left: -47px; }
+	border: solid 1px #F0C36D; background: #F9EDBE; position: absolute; left: 50%; z-index: 99; margin-left: -47px;
+	border-radius: 2px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
 
 /*
  * jquery jscrollpane plugin
@@ -170,4 +172,4 @@ a { text-decoration: none; color: #777; }
 #list #header { height: 712px; }
 #list #fashion { padding-top: 201px; }
 #list #fashion-more { top: 137px; }
-#list #fashion .loading { bottom: 20px; }
+#list #fashion .loading { top: 201px; }

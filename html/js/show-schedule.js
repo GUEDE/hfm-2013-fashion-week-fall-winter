@@ -39,7 +39,8 @@ define(['libs/globalize', 'libs/jquery.simpleslide'], function(Globalize) {
 		_refresh: function(date) {
 			var _self = this, shows = [], $loading;
 			
-			$loading = $('#show .loading').fadeIn();
+			$loading = $('#show .loading').stop(true, true).fadeIn();
+			
 			$.get(REQUEST_URL, {
 				city: _self._city,
 				date: date
@@ -64,9 +65,8 @@ define(['libs/globalize', 'libs/jquery.simpleslide'], function(Globalize) {
 					})
 				.end()
 					.find('li:last').addClass('show-item-last');
-				
+					
 				$loading.delay(800).fadeOut();
-				
 			}, 'jsonp');
 		},
 		_buildShow: function(show) {

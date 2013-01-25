@@ -45,7 +45,7 @@
 				this._modules = this._modules || [];
 				
 				if (module instanceof Array) {
-					this._modules.concat(module);
+					this._modules = this._modules.concat(module);
 				} else {
 					this._modules.push(module);
 				}

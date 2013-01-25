@@ -5,17 +5,20 @@
 		<title>2013 Fall / Winter Fashion Week</title>
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="stylesheet" href="themes/core/core.css" />
-		<link rel="stylesheet" href="themes/london/theme.css" />
-		<script src="js/libs/jquery-1.7.2.js"></script>
-		<script src="js/libs/jquery.cycle.all.js"></script>
-		<script src="js/libs/jquery.mousewheel.js"></script>
-		<script src="js/libs/jquery.jscrollpane.min.js"></script>
-		<script src="js/libs/jquery-simpleslide.js"></script>
-		<script src="js/libs/jquery.blockUI.js"></script>
-		<script src="js/libs/flowplayer-3.2.11.min.js"></script>
-		<script src="js/utilities.js"></script>
-		<script src="js/modules.js"></script>
-		<script src="js/general.js"></script>
+		<link rel="stylesheet" href="themes/milan/theme.css" />
+		<script src="js/libs/jquery-1.8.3.min.js"></script>
+		<script src="js/libs/require.js" data-main="js/main"></script>
+		<!--[if IE 6]>
+		<script src="js/libs/DD_belatedPNG_0.0.8a-min.js"></script>
+		<script>
+			DD_belatedPNG.fix('#nav-quick, #nav-fashion a, ' + 
+				'#focus-slideshow-title, ' + 
+				'#editors-hit-header img, ' + 
+				'.show-gallery span, ' +
+				'.fashion-shop-header a, .fashion-shop-desc, .fashion-shop-share a, ' + 
+				'#weibo');
+		</script>
+		<![endif]-->
 	</head>
 	<body id="list" data-city="milan">
 		<div id="container">
@@ -46,196 +49,19 @@
 			</div>
 			<div id="content">
 				<div id="fashion">
+					<div class="loading">loading...</div>
 					<a id="fashion-more" class="cleartext" href="">more</a>
-					<div id="fashion-city" data-display-type="waterfall">
+					<div id="fashion-city" data-type="paging" data-page-items-count="16">
 						<div class="fashion-street">
-							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-comment">
-									<a class="cleartext" href="" target="_blank">comment</a>
-								</h2>
-								<div class="fashion-shop-content">
-									<p>
-										<a href=""><img width="230" alt="" src="images/fashionview1.jpg" /></a>
-									</p>
-									<div class="fashion-shop-desc">
-										<p>
-											女星红毯造型赏 孙菲菲又变脸
-										</p>
-										<ul class="fashion-shop-share">
-											<li>
-												<a class="renren cleartext" href="">renren</a>
-											</li>
-											<li>
-												<a class="sina cleartext" href="">sina weibo</a>
-											</li>
-											<li>
-												<a class="qq-weibo cleartext" href="">qq weibo</a>
-											</li>
-											<li>
-												<a class="qq-space cleartext" href="">qq space</a>
-											</li>
-											<li>
-												<a class="elle cleartext" href="">elle</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-makeup">
-									<a class="cleartext" href="" target="_blank">makeup</a>
-								</h2>
-								<div class="fashion-shop-content">
-									<p>
-										<a href=""><img width="230" alt="" src="images/fashionview2.jpg" /></a>
-									</p>
-									<div class="fashion-shop-desc">
-										<p>
-											女星红毯造型赏 孙菲菲又变脸
-										</p>
-										<ul class="fashion-shop-share">
-											<li>
-												<a class="renren cleartext" href="">renren</a>
-											</li>
-											<li>
-												<a class="sina cleartext" href="">sina weibo</a>
-											</li>
-											<li>
-												<a class="qq-weibo cleartext" href="">qq weibo</a>
-											</li>
-											<li>
-												<a class="qq-space cleartext" href="">qq space</a>
-											</li>
-											<li>
-												<a class="elle cleartext" href="">elle</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
 						</div>
 						<div class="fashion-street">
-							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-viewpoint">
-									<a class="cleartext" href="" target="_blank">viewpoint</a>
-								</h2>
-								<div class="fashion-shop-content">
-									<p>
-										<a href=""><img width="230" alt="" src="images/fashionview3.jpg" /></a>
-									</p>
-									<div class="fashion-shop-desc">
-										<p>
-											女星红毯造型赏 孙菲菲又变脸
-										</p>
-										<ul class="fashion-shop-share">
-											<li>
-												<a class="renren cleartext" href="">renren</a>
-											</li>
-											<li>
-												<a class="sina cleartext" href="">sina weibo</a>
-											</li>
-											<li>
-												<a class="qq-weibo cleartext" href="">qq weibo</a>
-											</li>
-											<li>
-												<a class="qq-space cleartext" href="">qq space</a>
-											</li>
-											<li>
-												<a class="elle cleartext" href="">elle</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
 						</div>
 						<div class="fashion-street">
-							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-makeup">
-									<a class="cleartext" href="" target="_blank">makeup</a>
-								</h2>
-								<div class="fashion-shop-content">
-									<p>
-										<a href=""><img width="230" alt="" src="images/fashionview4.jpg" /></a>
-									</p>
-									<div class="fashion-shop-desc">
-										<p>
-											女星红毯造型赏 孙菲菲又变脸
-										</p>
-										<ul class="fashion-shop-share">
-											<li>
-												<a class="renren cleartext" href="">renren</a>
-											</li>
-											<li>
-												<a class="sina cleartext" href="">sina weibo</a>
-											</li>
-											<li>
-												<a class="qq-weibo cleartext" href="">qq weibo</a>
-											</li>
-											<li>
-												<a class="qq-space cleartext" href="">qq space</a>
-											</li>
-											<li>
-												<a class="elle cleartext" href="">elle</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
 						</div>
 						<div class="fashion-street fashion-street-last">
-							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-pophit">
-									<a class="cleartext" href="" target="_blank">pophit</a>
-								</h2>
-								<div class="fashion-shop-content">
-									<p>
-										<a href=""><img width="230" alt="" src="images/fashionview3.jpg" /></a>
-									</p>
-									<div class="fashion-shop-desc">
-										<p>
-											女星红毯造型赏 孙菲菲又变脸
-										</p>
-										<ul class="fashion-shop-share">
-											<li>
-												<a class="renren cleartext" href="">renren</a>
-											</li>
-											<li>
-												<a class="sina cleartext" href="">sina weibo</a>
-											</li>
-											<li>
-												<a class="qq-weibo cleartext" href="">qq weibo</a>
-											</li>
-											<li>
-												<a class="qq-space cleartext" href="">qq space</a>
-											</li>
-											<li>
-												<a class="elle cleartext" href="">elle</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 					<ul id="fashion-paging">
-						<li>
-							<a class="fashion-paging-active" href="">1</a>
-						</li>
-						<li>
-							<a href="">2</a>
-						</li>
-						<li>
-							<a href="">3</a>
-						</li>
-						<li>
-							<a href="">4</a>
-						</li>
-						<li>
-							<a href="">5</a>
-						</li>
-						<li>
-							<a href="">6</a>
-						</li>
 					</ul>
 				</div>
 			</div>

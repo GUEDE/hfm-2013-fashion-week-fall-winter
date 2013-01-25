@@ -6,10 +6,7 @@ define(['utilities'], function(util) {
 			WATERFALL: 'waterfall'
 		};
 	
-	return fashionView: {
-		_pageIndex: 1,
-		_pageItemsCount: 9,
-		
+	return {
 		_category: {
 			'11': 'comments',
 			'12': 'viewpoint',
@@ -25,7 +22,7 @@ define(['utilities'], function(util) {
 				categoryId = '';
 			}
 			
-			$loading = $('#fashion .loading').fadeIn();
+			$loading = $('#fashion .loading').stop(true, true).fadeIn();
 			$.get(REQUEST_URL, {
 				city: _self._city,
 				page: _self._pageIndex,
@@ -34,9 +31,12 @@ define(['utilities'], function(util) {
 			}, function(res) {
 				if ($.type(res) === 'object' && res.list.length) {
 					$street = $('#fashion-city .fashion-street');
-					if (_self._type === DISPLAY_TYPE.PAGING ) {
+					if (_self._type === DISPLAY_TYPE.PAGING) {
 						$street.html('');
 						_self._buildPaging(res.pageCount);
+					}
+					if (_self._type === DISPLAY_TYPE.WATERFALL) {
+						_self._pageIndex++;
 					}
 					
 					$.each(res.list, function(index, shop) {
@@ -44,9 +44,24 @@ define(['utilities'], function(util) {
 					});
 			    }
 			    
-			    $loading.delay(800).fadeOut();
 			    _self._buildStreet.isBuilding = false;
+			    $loading.delay(800).fadeOut();
 			}, 'jsonp');
+		},
+		_rebuildStreet: function() {
+			var scrollTop = $(document).scrollTop();
+			
+			if ( scrollTop + $(window).height() > $(document).height() - 350 ) {
+				if (this._scrollTop && this._scrollTop > scrollTop) {
+					return;
+				}
+				this._scrollTop = scrollTop;
+				
+				if (!this._buildStreet.isBuilding) {
+					this._buildStreet.isBuilding = true;
+					this._buildStreet();
+				}
+			}
 		},
 		_buildShop: function(shop) {
 			var headerUrl = 'http://www.ellechina.com/mini/13awfashionweek/index.php/list?city=' + this._city + '&cid=' + shop.category,
@@ -67,7 +82,7 @@ define(['utilities'], function(util) {
 			
 			return '<div class="fashion-shop">' + 
 					'<h2 class="fashion-shop-header">' + 
-						'<a class="cleartext ' + category + '" href="' + headerUrl + '" target="_blank">' + category + '</a>' + 
+						'<a class="cleartext ' + category + '" href="' + shop.caturl + '" target="_blank">' + category + '</a>' + 
 					'</h2>' + 
 					'<div class="fashion-shop-content">' + 
 						'<p><a href="' + shop.url + '"><img width="230" alt="' + shop.title + '" src="' + shop.thumb + '" /></a></p>' + 
@@ -93,7 +108,7 @@ define(['utilities'], function(util) {
 	    	}
 	    	
 	    	$('#fashion-paging').html(items.join(''))
-	    		.find('li').eq(_self._pageIndex).addClass('fashion-paging-active')
+	    		.find('li').eq(_self._pageIndex - 1).addClass('fashion-paging-active')
 	    		.siblings('li').removeClass('fashion-paging-active');
 		},
 		
@@ -103,6 +118,8 @@ define(['utilities'], function(util) {
 			
 			this._city = $('body').data('city');
 			this._type = $('#fashion-city').data('type');
+			this._pageItemsCount = $('#fashion-city').data('pageItemsCount');
+			this._pageIndex = 1;
 			this._buildStreet();
 			
 			$('#fashion-paging').on('click', 'a', function() {
@@ -120,16 +137,7 @@ define(['utilities'], function(util) {
 				
 				$(document).scrollTop(0);
 				$(window).bind('scroll', function() {
-					util.throttle(function() {
-						if ( $(document).scrollTop() + $(window).height() > $(document).height() - 50 ) {
-							if (!this._buildStreet.isBuilding) {
-								this._buildStreet.isBuilding = true;
-								
-								this._pageIndex++;
-								this._buildStreet();
-							}
-						}
-					}, _self);
+					util.throttle(_self._rebuildStreet, _self);
 				});
 			}
 		}

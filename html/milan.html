@@ -6,16 +6,19 @@
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="stylesheet" href="themes/core/core.css" />
 		<link rel="stylesheet" href="themes/milan/theme.css" />
-		<script src="js/libs/jquery-1.7.2.js"></script>
-		<script src="js/libs/jquery.cycle.all.js"></script>
-		<script src="js/libs/jquery.mousewheel.js"></script>
-		<script src="js/libs/jquery.jscrollpane.min.js"></script>
-		<script src="js/libs/jquery-simpleslide.js"></script>
-		<script src="js/libs/jquery.blockUI.js"></script>
-		<script src="js/libs/flowplayer-3.2.11.min.js"></script>
-		<script src="js/utilities.js"></script>
-		<script src="js/modules.js"></script>
-		<script src="js/general.js"></script>
+		<script src="js/libs/jquery-1.8.3.min.js"></script>
+		<script src="js/libs/require.js" data-main="js/main"></script>
+		<!--[if IE 6]>
+		<script src="js/libs/DD_belatedPNG_0.0.8a-min.js"></script>
+		<script>
+			DD_belatedPNG.fix('#nav-quick, #nav-fashion a, ' + 
+				'#focus-slideshow-title, ' + 
+				'#editors-hit-header img, ' + 
+				'.show-gallery span, ' +
+				'.fashion-shop-header a, .fashion-shop-desc, .fashion-shop-share a, ' + 
+				'#weibo');
+		</script>
+		<![endif]-->
 	</head>
 	<body id="home" data-city="milan">
 		<div id="container">
@@ -27,7 +30,7 @@
 					<span id="fashionshow-title">2013秋冬时装周视频标题</span>
 				</div>
 				<div id="nav-main">
-					<img alt="" src="images/flash-nav-main-milan.jpg" />
+					<img alt="" src="images/flash-nav-main-london.jpg" />
 				</div>
 				<ul id="nav-fashion">
 					<li>
@@ -67,119 +70,66 @@
 			<div id="content">
 				<div id="focus">
 					<a id="focus-more" class="cleartext" href="">more</a>
-					<a id="focus-left" href="">
-						<img width="245" height="558" alt="" src="images/focus-left-milan.jpg" />
-					</a>
-					<a id="focus-right" href="">
-						<img width="245" height="558" alt="" src="images/focus-right-milan.jpg" />
-					</a>
-					<div id="focus-center">
-						<!--2行标题间用‘-’中横杠分割-->
-						<ul id="focus-slideshow">
-							<li>
-								<a href=""><img width="490" height="506" src="images/focus-slideshow-1.jpg" alt="1标题较小的字-1标题较大的字" /></a>
-							</li>
-							<li>
-								<a href=""><img width="490" height="506" src="images/focus-slideshow-2.jpg" alt="2标题较小的字-2标题较大的字" /></a>
-							</li>
-							<li>
-								<a href=""><img width="490" height="506" src="images/focus-slideshow-3.jpg" alt="3标题较小的字-3标题较大的字" /></a>
-							</li>
-							<li>
-								<a href=""><img width="490" height="506" src="images/focus-slideshow-4.jpg" alt="4标题较小的字-5标题较大的字" /></a>
-							</li>
-							<li>
-								<a href=""><img width="490" height="506" src="images/focus-slideshow-5.jpg" alt="5标题较小的字-5标题较大的字" /></a>
-							</li>
-						</ul>
-						<p id="focus-slideshow-title">
-							<span>1标题较小的字</span>
-							<strong>1标题较大的字</strong>
-						</p>
-						<ul id="focus-slideshow-nav">
-							<li><a class="focus-slideshow-active" href="">1</a></li>
-							<li><a href="">2</a></li>
-							<li><a href="">3</a></li>
-							<li><a href="">4</a></li>
-							<li><a href="">5</a></li>
-							<li><a href="">6</a></li>
-						</ul>
-					</div>
+					<div id="focus-content">
+						<a id="focus-left" href="">
+							<img width="245" height="558" alt="" src="images/focus-left-london.jpg" />
+						</a>
+						<a id="focus-right" href="">
+							<img width="245" height="558" alt="" src="images/focus-right-london.jpg" />
+						</a>
+						<div id="focus-center">
+							<!--标题用图片的: alt属性，用‘-’中横杠分割，表示为2行标题-->
+							<ul id="focus-slideshow">
+								<li>
+									<a href=""><img width="490" height="506" src="images/focus-slideshow-1.jpg" alt="1标题较小的字-1标题较大的字" /></a>
+								</li>
+								<li>
+									<a href=""><img width="490" height="506" src="images/focus-slideshow-2.jpg" alt="2标题较小的字-2标题较大的字" /></a>
+								</li>
+								<li>
+									<a href=""><img width="490" height="506" src="images/focus-slideshow-3.jpg" alt="3标题较小的字-3标题较大的字" /></a>
+								</li>
+								<li>
+									<a href=""><img width="490" height="506" src="images/focus-slideshow-4.jpg" alt="4标题较小的字-4标题较大的字" /></a>
+								</li>
+								<li>
+									<a href=""><img width="490" height="506" src="images/focus-slideshow-5.jpg" alt="5标题较小的字-5标题较大的字" /></a>
+								</li>
+							</ul>
+							<p id="focus-slideshow-title">
+							</p>
+							<ul id="focus-slideshow-nav">
+							</ul>
+						</div>
+					</div>	
 				</div>
 				<div id="show">
+					<div class="loading">loading...</div>
 					<a id="show-more" class="cleartext" href="">more</a>
 					<div id="show-schedule">
-						<div data-date="" class="show-date show-date-1">
-							<a href="">Sep. 27</a>
+						<div class="show-date show-date-1">
+							<a href="">1/1/2013</a>
 						</div>
-						<div data-date="" class="show-date show-date-2">
-							<a href="">Sep. 28</a>
+						<div class="show-date show-date-2">
+							<a href=""></a>
 						</div>
-						<div data-date="" class="show-date show-date-3">
-							<a href="">Sep. 29</a>
+						<div class="show-date show-date-3">
+							<a href=""></a>
 						</div>
-						<div data-date="" class="show-date show-date-4">
-							<a href="">Sep. 30</a>
+						<div class="show-date show-date-4">
+							<a href=""></a>
 						</div>
-						<div data-date="" class="show-date show-date-5">
-							<a href="">Oct. 01</a>
+						<div class="show-date show-date-5">
+							<a href=""></a>
 						</div>
-						<div data-date="" class="show-date show-date-6">
-							<a href="">Oct. 02</a>
+						<div class="show-date show-date-6">
+							<a href=""></a>
 						</div>
-						<div data-date="" class="show-date show-date-7">
-							<a href="">Oct. 03</a>
+						<div class="show-date show-date-7">
+							<a href=""></a>
 						</div>
 					</div>
 					<ul id="show-content">
-						<li>
-							<span class="show-time"><span>Time:</span>8:00 AM</span>
-							<a class="show-gallery" href="">
-								<img width="154" height="427" alt="" src="images/schedule1.jpg" />
-								<span></span>
-							</a>
-							<span class="show-name">CATHERINE MALANDRINO BLACK LABEL</span>
-						</li>
-						<li>
-							<span class="show-time"><span>Time:</span>8:00 AM</span>
-							<a class="show-gallery" href="">
-								<img width="154" height="427" alt="" src="images/schedule2.jpg" />
-								<span></span>
-							</a>
-							<span class="show-name">ANTONIO BERARDI</span>
-						</li>
-						<li>
-							<span class="show-time"><span>Time:</span>8:00 AM</span>
-							<a class="show-gallery" href="">
-								<img width="154" height="427" alt="" src="images/schedule3.jpg" />
-								<span></span>
-							</a>
-							<span class="show-name">HERVÉ LÉGER BY MAX AZRIA</span>
-						</li>
-						<li>
-							<span class="show-time"><span>Time:</span>8:00 AM</span>
-							<a class="show-gallery" href="">
-								<img width="154" height="427" alt="" src="images/schedule4.jpg" />
-								<span></span>
-							</a>
-							<span class="show-name">MILLY BY MICHELLE SMITH</span>
-						</li>
-						<li>
-							<span class="show-time"><span>Time:</span>8:00 AM</span>
-							<a class="show-gallery" href="">
-								<img width="154" height="427" alt="" src="images/schedule5.jpg" />
-								<span></span>
-							</a>
-							<span class="show-name">PRINGLE OF SCOTLAND</span>
-						</li>
-						<li class="show-item-last">
-							<span class="show-time"><span>Time:</span>8:00 AM</span>
-							<a class="show-gallery" href="">
-								<img width="154" height="427" alt="" src="images/schedule6.jpg" />
-								<span></span>
-							</a>
-							<span class="show-name">MISSONI</span>
-						</li>
 					</ul>
 				</div>
 				<div id="editors-hit">
@@ -199,196 +149,19 @@
 					</div>
 				</div>
 				<div id="fashion">
+					<div class="loading">loading...</div>
 					<a id="fashion-more" class="cleartext" href="">more</a>
-					<div id="fashion-city" data-display-type="paging">
+					<div id="fashion-city" data-type="paging" data-page-items-count="12">
 						<div class="fashion-street">
-							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-comment">
-									<a class="cleartext" href="" target="_blank">comment</a>
-								</h2>
-								<div class="fashion-shop-content">
-									<p>
-										<a href=""><img width="230" alt="" src="images/fashionview1.jpg" /></a>
-									</p>
-									<div class="fashion-shop-desc">
-										<p>
-											女星红毯造型赏 孙菲菲又变脸
-										</p>
-										<ul class="fashion-shop-share">
-											<li>
-												<a class="renren cleartext" href="">renren</a>
-											</li>
-											<li>
-												<a class="sina cleartext" href="">sina weibo</a>
-											</li>
-											<li>
-												<a class="qq-weibo cleartext" href="">qq weibo</a>
-											</li>
-											<li>
-												<a class="qq-space cleartext" href="">qq space</a>
-											</li>
-											<li>
-												<a class="elle cleartext" href="">elle</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-makeup">
-									<a class="cleartext" href="" target="_blank">makeup</a>
-								</h2>
-								<div class="fashion-shop-content">
-									<p>
-										<a href=""><img width="230" alt="" src="images/fashionview2.jpg" /></a>
-									</p>
-									<div class="fashion-shop-desc">
-										<p>
-											女星红毯造型赏 孙菲菲又变脸
-										</p>
-										<ul class="fashion-shop-share">
-											<li>
-												<a class="renren cleartext" href="">renren</a>
-											</li>
-											<li>
-												<a class="sina cleartext" href="">sina weibo</a>
-											</li>
-											<li>
-												<a class="qq-weibo cleartext" href="">qq weibo</a>
-											</li>
-											<li>
-												<a class="qq-space cleartext" href="">qq space</a>
-											</li>
-											<li>
-												<a class="elle cleartext" href="">elle</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
 						</div>
 						<div class="fashion-street">
-							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-viewpoint">
-									<a class="cleartext" href="" target="_blank">viewpoint</a>
-								</h2>
-								<div class="fashion-shop-content">
-									<p>
-										<a href=""><img width="230" alt="" src="images/fashionview3.jpg" /></a>
-									</p>
-									<div class="fashion-shop-desc">
-										<p>
-											女星红毯造型赏 孙菲菲又变脸
-										</p>
-										<ul class="fashion-shop-share">
-											<li>
-												<a class="renren cleartext" href="">renren</a>
-											</li>
-											<li>
-												<a class="sina cleartext" href="">sina weibo</a>
-											</li>
-											<li>
-												<a class="qq-weibo cleartext" href="">qq weibo</a>
-											</li>
-											<li>
-												<a class="qq-space cleartext" href="">qq space</a>
-											</li>
-											<li>
-												<a class="elle cleartext" href="">elle</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
 						</div>
 						<div class="fashion-street">
-							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-makeup">
-									<a class="cleartext" href="" target="_blank">makeup</a>
-								</h2>
-								<div class="fashion-shop-content">
-									<p>
-										<a href=""><img width="230" alt="" src="images/fashionview4.jpg" /></a>
-									</p>
-									<div class="fashion-shop-desc">
-										<p>
-											女星红毯造型赏 孙菲菲又变脸
-										</p>
-										<ul class="fashion-shop-share">
-											<li>
-												<a class="renren cleartext" href="">renren</a>
-											</li>
-											<li>
-												<a class="sina cleartext" href="">sina weibo</a>
-											</li>
-											<li>
-												<a class="qq-weibo cleartext" href="">qq weibo</a>
-											</li>
-											<li>
-												<a class="qq-space cleartext" href="">qq space</a>
-											</li>
-											<li>
-												<a class="elle cleartext" href="">elle</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
 						</div>
 						<div class="fashion-street fashion-street-last">
-							<div class="fashion-shop">
-								<h2 class="fashion-shop-header fashion-shop-pophit">
-									<a class="cleartext" href="" target="_blank">pophit</a>
-								</h2>
-								<div class="fashion-shop-content">
-									<p>
-										<a href=""><img width="230" alt="" src="images/fashionview3.jpg" /></a>
-									</p>
-									<div class="fashion-shop-desc">
-										<p>
-											女星红毯造型赏 孙菲菲又变脸
-										</p>
-										<ul class="fashion-shop-share">
-											<li>
-												<a class="renren cleartext" href="">renren</a>
-											</li>
-											<li>
-												<a class="sina cleartext" href="">sina weibo</a>
-											</li>
-											<li>
-												<a class="qq-weibo cleartext" href="">qq weibo</a>
-											</li>
-											<li>
-												<a class="qq-space cleartext" href="">qq space</a>
-											</li>
-											<li>
-												<a class="elle cleartext" href="">elle</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 					<ul id="fashion-paging">
-						<li>
-							<a class="fashion-paging-active" href="">1</a>
-						</li>
-						<li>
-							<a href="">2</a>
-						</li>
-						<li>
-							<a href="">3</a>
-						</li>
-						<li>
-							<a href="">4</a>
-						</li>
-						<li>
-							<a href="">5</a>
-						</li>
-						<li>
-							<a href="">6</a>
-						</li>
 					</ul>
 				</div>
 				<div id="weibo">
@@ -426,7 +199,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="weibo-log weibo-log-last">
+							<div class="weibo-log">
 								<div class="weibo-log-content">
 									<a class="weibo-log-avatar" href=""><img alt="" width="50" height="50" src="images/weibo-editor3.jpg" /></a>
 									<div class="weibo-log-detail">
@@ -478,7 +251,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="weibo-log weibo-log-last">
+							<div class="weibo-log">
 								<div class="weibo-log-content">
 									<a class="weibo-log-avatar" href=""><img alt="" width="50" height="50" src="images/weibo-editor1.jpg" /></a>
 									<div class="weibo-log-detail">
