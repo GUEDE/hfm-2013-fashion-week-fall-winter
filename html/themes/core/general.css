@@ -84,7 +84,7 @@ a { text-decoration: none; color: #777; }
 #show-more { width: 90px; height: 39px; position: absolute; top: 30px; right: 0; }
 #show-schedule { width: 938px; margin: 0 auto 13px; }
 .show-date { width: 126px; height: 70px; padding: 0 4px; float: left; }
-.show-date a { display: block; height: 100%; }
+.show-date a { display: block; height: 100%; text-indent: -999px; overflow: hidden; }
 .show-schedule-prev,
 .show-schedule-next { display: block; width: 16px; height: 27px; text-indent: -999px; overflow: hidden; }
 #show-content li { width: 154px; margin-right: 11px; float: left; }
