@@ -85,7 +85,7 @@ define(['libs/globalize', 'libs/jquery.simpleslide'], function(Globalize) {
 			var _self = this;
 			
 			this._city = $('body').data('city');
-			this._initSlide(new Date(2013, 0, 1));
+			this._initSlide(new Date());
 			
 			$('#show-schedule').on('click', '.show-date', function(event) {
 				var date = $.trim( $('a', this).text() );
