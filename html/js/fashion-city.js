@@ -125,6 +125,7 @@ define(['utilities'], function(util) {
 			$('#fashion-paging').on('click', 'a', function() {
     			var pageIndex = $.trim($(this).text());
     			
+    			pageIndex = parseInt(pageIndex);
     			if (pageIndex === _self._pageIndex) {
     				return false;
     			}

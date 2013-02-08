@@ -85,7 +85,14 @@ define(['libs/globalize', 'libs/jquery.simpleslide'], function(Globalize) {
 			var _self = this;
 			
 			this._city = $('body').data('city');
-			this._initSlide(new Date());
+			
+			var defaultDate = new Date();
+			if (this._city === 'newyork' && (defaultDate.getMonth === 1 && defaultDate.getDate() >= 12 && defaultDate.getDate() <= 15)) {
+				defaultDate.setDate(12);
+			} else {
+				defaultDate.setDate( defaultDate.getDate() - 1 );
+			}
+			this._initSlide(defaultDate);
 			
 			$('#show-schedule').on('click', '.show-date', function(event) {
 				var date = $.trim( $('a', this).text() );
